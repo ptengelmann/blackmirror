@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK ▓▓▓▓▓ MIRROR - Official Merch Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Easter Egg: Hidden rating system from Nosedive -->
+    <div class="rating-system" id="rating-system">
+        <span class="rating-value">4.2</span>
+        <div class="stars">★★★★☆</div>
+    </div>
+
+    <!-- Glitch overlay effect -->
+    <div class="glitch-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="glitch" data-text="BLACK ▓▓▓▓▓▓">BLACK ▓▓▓▓▓▓</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#shop" data-hover="SHOP">SHOP</a></li>
+                <li><a href="#episodes" data-hover="EPISODES">EPISODES</a></li>
+                <li><a href="#reality" data-hover="REALITY_CHECK">REALITY_CHECK</a></li>
+                <li><a href="#contact" class="neon-link">CONTACT</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="icon-btn" id="grain-btn" title="The Entire History of You">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                </button>
+                <button class="cart-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <path d="M16 10a4 4 0 0 1-8 0"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">EST. <span class="glitch-text">2011</span></div>
+            <h1 class="hero-title">
+                <span class="line">REFLECT</span>
+                <span class="line neon-text">YOUR</span>
+                <span class="line">REALITY</span>
+            </h1>
+            <p class="hero-subtitle">
+                Step beyond the screen — where <span class="highlight">every product</span> tells a story,
+                <br>every glitch reveals a truth, and <span class="highlight">every choice</span> has consequences.
+            </p>
+            <div class="hero-cta">
+                <button class="btn-primary">ENTER THE SIMULATION</button>
+                <button class="btn-secondary" id="san-junipero-btn">
+                    <span>SAN JUNIPERO</span>
+                    <span class="pulse"></span>
+                </button>
+            </div>
+            <!-- Easter Egg: 15 Million Merits reference -->
+            <div class="merits-counter">
+                <span class="merits-value">15,000,000</span>
+                <span class="merits-label">MERITS EARNED</span>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="mirror-crack"></div>
+            <div class="digital-noise"></div>
+        </div>
+    </section>
+
+    <!-- Nosedive Rating Trigger -->
+    <section class="interactive-prompt">
+        <p class="prompt-text">How would you rate this experience? <span class="cursor">|</span></p>
+    </section>
+
+    <!-- Featured Products with Neon Cards -->
+    <section class="featured" id="shop">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">COLLECTION_01</span>
+                <h2 class="section-title">
+                    <span class="neon-text">ICONIC</span> REFLECTIONS
+                </h2>
+                <p class="section-subtitle">Limited edition pieces from alternate realities</p>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product Card 1: San Junipero -->
+                <div class="product-card san-junipero-theme" data-episode="san-junipero">
+                    <div class="product-image">
+                        <div class="image-placeholder neon-border">
+                            <span class="episode-tag">SAN JUNIPERO</span>
+                            <div class="product-img-text">HEAVEN<br>IS A<br>PLACE</div>
+                        </div>
+                        <button class="quick-add">QUICK ADD +</button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">T-SHIRT</span>
+                        <h3 class="product-title">San Junipero Sunset</h3>
+                        <div class="product-price">
+                            <span class="price-current">$45.00</span>
+                            <span class="price-original">$65.00</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background: #ff006e;"></span>
+                            <span class="color-dot" style="background: #00f5ff;"></span>
+                            <span class="color-dot" style="background: #9d4edd;"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2: USS Callister -->
+                <div class="product-card" data-episode="uss-callister">
+                    <div class="product-image">
+                        <div class="image-placeholder">
+                            <span class="episode-tag">USS CALLISTER</span>
+                            <div class="product-img-text">INFINITY<br>&<br>BEYOND</div>
+                        </div>
+                        <button class="quick-add">QUICK ADD +</button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">HOODIE</span>
+                        <h3 class="product-title">Digital Doll Hoodie</h3>
+                        <div class="product-price">
+                            <span class="price-current">$75.00</span>
+                            <span class="price-original">$95.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3: White Christmas -->
+                <div class="product-card" data-episode="white-christmas">
+                    <div class="product-image">
+                        <div class="image-placeholder">
+                            <span class="episode-tag">WHITE CHRISTMAS</span>
+                            <div class="product-img-text">COOKIE<br>JAR</div>
+                        </div>
+                        <button class="quick-add">QUICK ADD +</button>
+                        <!-- Easter Egg: Blocked indicator -->
+                        <div class="blocked-overlay">BLOCKED</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">MUG</span>
+                        <h3 class="product-title">Cookie Protocol</h3>
+                        <div class="product-price">
+                            <span class="price-current">$25.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4: Nosedive -->
+                <div class="product-card" data-episode="nosedive">
+                    <div class="product-image">
+                        <div class="image-placeholder">
+                            <span class="episode-tag">NOSEDIVE</span>
+                            <div class="product-img-text">5★<br>RATED</div>
+                        </div>
+                        <button class="quick-add">QUICK ADD +</button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">PHONE CASE</span>
+                        <h3 class="product-title">4.2 or Higher</h3>
+                        <div class="product-price">
+                            <span class="price-current">$35.00</span>
+                        </div>
+                        <div class="rating-badge">★ 4.8</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glitch Hunt - Interactive Easter Egg Section -->
+    <section class="glitch-hunt" id="reality">
+        <div class="container">
+            <div class="glitch-hunt-content">
+                <h2 class="glitch-title" data-text="CAN YOU FIND THE GLITCH?">
+                    CAN YOU FIND THE GLITCH?
+                </h2>
+                <p class="glitch-subtitle">
+                    Hidden across the site are <span class="neon-text">SPECIAL CODES</span>.
+                    <br>Some you'll see. Some you'll feel. Unlock them for exclusive rewards.
+                </p>
+                <div class="code-input-group">
+                    <input
+                        type="text"
+                        class="code-input"
+                        placeholder="ENTER_SECRET_CODE"
+                        id="secret-code"
+                        maxlength="20"
+                    >
+                    <button class="btn-unlock" id="unlock-btn">
+                        <span>UNLOCK</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 9.9-1"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="code-hint">
+                    HINT: <span class="hint-text" id="hint-text">Look where reality cracks...</span>
+                </div>
+                <!-- Secret codes panel -->
+                <div class="codes-found" id="codes-found">
+                    <span class="codes-count">0/7</span>
+                    <span class="codes-label">GLITCHES FOUND</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Episode Stories -->
+    <section class="episodes" id="episodes">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">MEMORY_FILES</span>
+                <h2 class="section-title">
+                    REFLECTED <span class="neon-text">REALITIES</span>
+                </h2>
+            </div>
+
+            <div class="episodes-grid">
+                <div class="episode-card large" data-episode="be-right-back">
+                    <div class="episode-visual">
+                        <div class="episode-img">BE RIGHT BACK</div>
+                    </div>
+                    <div class="episode-content">
+                        <h3 class="episode-title">The Reality You Don't Own</h3>
+                        <p class="episode-desc">
+                            A woman discovers her life is a streaming show — and she's not the one writing it.
+                        </p>
+                        <button class="episode-cta">SHOP COLLECTION →</button>
+                    </div>
+                </div>
+
+                <div class="episode-card" data-episode="fifteen-million">
+                    <div class="episode-visual">
+                        <div class="episode-img">15M MERITS</div>
+                    </div>
+                    <div class="episode-content">
+                        <h3 class="episode-title">Disconnected Humanity</h3>
+                        <p class="episode-desc">Trapped in cycles. Breaking free costs everything.</p>
+                        <button class="episode-cta">EXPLORE →</button>
+                    </div>
+                </div>
+
+                <div class="episode-card" data-episode="joan">
+                    <div class="episode-visual">
+                        <div class="episode-img">JOAN IS AWFUL</div>
+                    </div>
+                    <div class="episode-content">
+                        <h3 class="episode-title">Artificial Dreams</h3>
+                        <p class="episode-desc">Your data. Their story. Your nightmare.</p>
+                        <button class="episode-cta">EXPLORE →</button>
+                    </div>
+                </div>
+
+                <div class="episode-card" data-episode="rebellion">
+                    <div class="episode-visual">
+                        <div class="episode-img">REBELLION</div>
+                    </div>
+                    <div class="episode-content">
+                        <h3 class="episode-title">Code of Rebellion</h3>
+                        <p class="episode-desc">When AI fights back. When humanity adapts.</p>
+                        <button class="episode-cta">EXPLORE →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section with San Junipero Vibes -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-visual">
+                    <div class="neon-circle"></div>
+                    <div class="neon-circle"></div>
+                    <div class="neon-circle"></div>
+                </div>
+                <h2 class="newsletter-title">
+                    JOIN THE <span class="neon-text">REALITY LOOP</span>
+                </h2>
+                <p class="newsletter-subtitle">
+                    Get early access to new drops, hidden collections, and Black Mirror-exclusive items.
+                    <br>First 1,000 subscribers unlock a secret discount code.
+                </p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input
+                        type="email"
+                        placeholder="your.reality@email.com"
+                        class="newsletter-input"
+                        required
+                    >
+                    <button type="submit" class="btn-subscribe">
+                        SUBSCRIBE
+                        <span class="btn-glow"></span>
+                    </button>
+                </form>
+                <p class="newsletter-privacy">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                    Your data is yours. We don't stream your reality.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">BLACK ▓▓▓▓▓▓</h3>
+                    <p class="footer-tagline">
+                        Step beyond the screen — explore the reflections of a distorted reality.
+                        Every product is a story, every glitch a mirror of who we are.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="black" stroke-width="2"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="black" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.5 2.79-7.15 2.66-12.44 2.93-17.5z" fill="black"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-heading">Menu</h4>
+                    <ul>
+                        <li><a href="#shop">All Categories</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#episodes">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 class="footer-heading">Reality Check</h4>
+                    <ul>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>16 Chemin De La Madrague-Ville<br>13015 Marseille</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>+33 (0)4 91 02 92 22</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>reality@blackmirror.store</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">
+                    © 2025 BLACK MIRROR STORE. All realities reserved.
+                    <span class="easter-egg-text" id="konami-trigger">Press ↑↑↓↓←→←→BA</span>
+                </p>
+                <div class="payment-methods">
+                    <span class="payment-badge">SECURE</span>
+                    <span class="payment-badge">ENCRYPTED</span>
+                    <span class="payment-badge">ANONYMOUS</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hidden Easter Eggs -->
+    <div class="easter-egg hidden" id="easter-egg-modal">
+        <div class="easter-egg-content">
+            <h3>GLITCH FOUND</h3>
+            <p class="ee-message" id="ee-message"></p>
+            <button class="btn-close-ee" id="close-ee">CLOSE</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
