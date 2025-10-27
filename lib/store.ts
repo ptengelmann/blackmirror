@@ -4,9 +4,9 @@ import { CartItem, Product } from './types';
 interface StoreState {
   // Cart
   cart: CartItem[];
-  addToCart: (product: Product) => void;
-  removeFromCart: (productId: string) => void;
-  updateQuantity: (productId: string, quantity: number) => void;
+  addToCart: (product: Product, quantity?: number, size?: string) => void;
+  removeFromCart: (productId: string, size?: string) => void;
+  updateQuantity: (productId: string, quantity: number, size?: string) => void;
   clearCart: () => void;
   cartTotal: () => number;
 
@@ -30,28 +30,34 @@ interface StoreState {
 export const useStore = create<StoreState>((set, get) => ({
   // Cart
   cart: [],
-  addToCart: (product) =>
+  addToCart: (product, quantity = 1, size) =>
     set((state) => {
-      const existingItem = state.cart.find((item) => item.id === product.id);
+      const existingItem = state.cart.find(
+        (item) => item.id === product.id && item.selectedSize === size
+      );
       if (existingItem) {
         return {
           cart: state.cart.map((item) =>
-            item.id === product.id
-              ? { ...item, quantity: item.quantity + 1 }
+            item.id === product.id && item.selectedSize === size
+              ? { ...item, quantity: item.quantity + quantity }
               : item
           ),
         };
       }
-      return { cart: [...state.cart, { ...product, quantity: 1 }] };
+      return { cart: [...state.cart, { ...product, quantity, selectedSize: size }] };
     }),
-  removeFromCart: (productId) =>
+  removeFromCart: (productId, size) =>
     set((state) => ({
-      cart: state.cart.filter((item) => item.id !== productId),
+      cart: state.cart.filter(
+        (item) => !(item.id === productId && (size ? item.selectedSize === size : true))
+      ),
     })),
-  updateQuantity: (productId, quantity) =>
+  updateQuantity: (productId, quantity, size) =>
     set((state) => ({
       cart: state.cart.map((item) =>
-        item.id === productId ? { ...item, quantity } : item
+        item.id === productId && (size ? item.selectedSize === size : true)
+          ? { ...item, quantity }
+          : item
       ),
     })),
   clearCart: () => set({ cart: [] }),

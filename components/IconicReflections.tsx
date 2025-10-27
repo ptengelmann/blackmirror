@@ -1,13 +1,15 @@
 "use client";
 
+import { useRouter } from 'next/navigation';
 import { useStore } from '@/lib/store';
 
 export default function IconicReflections() {
+  const router = useRouter();
   const { setEasterEggMessage, addFoundCode } = useStore();
 
   const products = [
     {
-      id: 1,
+      id: 'white-bear-hoodie',
       title: "White Bear Hoodie",
       category: "Apparel",
       price: "$89.00",
@@ -15,7 +17,7 @@ export default function IconicReflections() {
       image: null,
     },
     {
-      id: 2,
+      id: 'uss-callister-tee',
       title: "USS Callister Tee",
       category: "Apparel",
       price: "$45.00",
@@ -23,7 +25,7 @@ export default function IconicReflections() {
       image: null,
     },
     {
-      id: 3,
+      id: 'nosedive-pin-set',
       title: "Nosedive Pin Set",
       category: "Accessories",
       price: "$29.00",
@@ -31,7 +33,7 @@ export default function IconicReflections() {
       image: null,
     },
     {
-      id: 4,
+      id: 'arkangel-system',
       title: "ARKANGEL System",
       category: "Tech",
       price: "CLASSIFIED",
@@ -40,7 +42,7 @@ export default function IconicReflections() {
       image: null,
     },
     {
-      id: 5,
+      id: 'san-junipero-poster',
       title: "San Junipero Poster",
       category: "Art Print",
       price: "$65.00",
@@ -48,7 +50,7 @@ export default function IconicReflections() {
       image: null,
     },
     {
-      id: 6,
+      id: 'grain-memory-unit',
       title: "Grain Memory Unit",
       category: "Collectible",
       price: "$125.00",
@@ -63,13 +65,13 @@ export default function IconicReflections() {
   };
 
   return (
-    <section className="relative w-full bg-bm-rich-black py-32 overflow-hidden">
+    <section className="relative w-full bg-bm-rich-black py-16 sm:py-24 md:py-32 overflow-hidden">
       {/* Grain Effect */}
       <div className="absolute inset-0 grain opacity-30 pointer-events-none" />
 
       {/* Broken Code Background */}
       <div className="absolute inset-0 opacity-[0.08] pointer-events-none overflow-hidden">
-        <pre className="text-[8px] font-mono text-bm-accent leading-[1.4] whitespace-pre-wrap break-all">
+        <pre className="text-[6px] sm:text-[7px] md:text-[8px] font-mono text-bm-accent leading-[1.4] whitespace-pre-wrap break-all">
 {`ERROR: REALITY.CORRUPT
 >>> import consciousness
 Traceback (most recent call last):
@@ -107,29 +109,27 @@ SYSTEM HALTED - PRESS ANY KEY
       </div>
 
       {/* Section Header */}
-      <div className="max-w-[1400px] mx-auto px-12 mb-20 relative z-10">
-        <div className="flex items-center gap-6">
-          <div className="h-[1px] w-16 bg-bm-accent" />
-          <h2 className="text-[11px] font-black tracking-[0.3em] uppercase text-bm-white">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 mb-12 sm:mb-16 md:mb-20 relative z-10">
+        <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
+          <div className="h-[1px] w-8 sm:w-12 md:w-16 bg-bm-accent" />
+          <h2 className="text-[9px] sm:text-[10px] md:text-[11px] font-black tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase text-bm-white">
             Featured Products
           </h2>
           <div className="h-[1px] flex-1 bg-gradient-to-r from-bm-accent/50 to-transparent" />
         </div>
-        <p className="text-bm-gray text-[9px] tracking-[0.2em] uppercase mt-4 ml-[88px]">
+        <p className="text-bm-gray text-[7px] sm:text-[8px] md:text-[9px] tracking-[0.15em] sm:tracking-[0.2em] uppercase mt-3 sm:mt-4 ml-0 sm:ml-[60px] md:ml-[88px]">
           Technology that reflects dystopia
         </p>
       </div>
 
-      {/* 2x3 Product Grid */}
-      <div className="max-w-[1400px] mx-auto px-12 relative z-10">
-        <div className="grid grid-cols-3 gap-8">
+      {/* 2x3 Product Grid - Responsive */}
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {products.map((product, index) => (
             <div
               key={product.id}
-              onClick={product.isEasterEgg ? handleBlockedClick : undefined}
-              className={`group relative overflow-hidden h-[380px] ${
-                product.isEasterEgg ? 'cursor-pointer' : 'cursor-default'
-              }`}
+              onClick={product.isEasterEgg ? handleBlockedClick : () => router.push(`/product/${product.id}`)}
+              className="group relative overflow-hidden h-[320px] sm:h-[340px] md:h-[380px] cursor-pointer"
               style={{ animationDelay: `${index * 80}ms` }}
             >
               {/* Background */}
@@ -185,7 +185,7 @@ SYSTEM HALTED - PRESS ANY KEY
               )}
 
               {/* Content */}
-              <div className="absolute inset-0 p-6 flex flex-col justify-between">
+              <div className="absolute inset-0 p-4 sm:p-5 md:p-6 flex flex-col justify-between">
                 {/* Top - Category & Status */}
                 <div className="flex items-center justify-between">
                   <span className={`text-[7px] font-medium tracking-[0.2em] uppercase transition-colors duration-300 ${

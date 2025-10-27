@@ -59,25 +59,25 @@ export default function EpisodeCarousel() {
   };
 
   return (
-    <section className="relative w-full bg-bm-rich-black py-32">
+    <section className="relative w-full bg-bm-rich-black py-16 sm:py-24 md:py-32">
       {/* Section Header */}
-      <div className="max-w-[1600px] mx-auto px-12 mb-20">
-        <div className="flex items-center gap-6">
-          <div className="h-[1px] w-16 bg-bm-accent" />
-          <h2 className="text-[11px] font-black tracking-[0.3em] uppercase text-bm-white">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-12 mb-12 sm:mb-16 md:mb-20">
+        <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
+          <div className="h-[1px] w-8 sm:w-12 md:w-16 bg-bm-accent" />
+          <h2 className="text-[9px] sm:text-[10px] md:text-[11px] font-black tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase text-bm-white">
             Episode Archive
           </h2>
           <div className="h-[1px] flex-1 bg-gradient-to-r from-bm-accent/50 to-transparent" />
         </div>
-        <p className="text-bm-gray text-[9px] tracking-[0.2em] uppercase mt-4 ml-[88px]">
+        <p className="text-bm-gray text-[7px] sm:text-[8px] md:text-[9px] tracking-[0.15em] sm:tracking-[0.2em] uppercase mt-3 sm:mt-4 ml-0 sm:ml-[60px] md:ml-[88px]">
           Exploring alternate realities
         </p>
       </div>
 
       {/* Horizontal Carousel */}
-      <div className="relative max-w-[1600px] mx-auto px-12">
+      <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 md:px-12">
         {/* Carousel Container */}
-        <div className="relative h-[500px] overflow-hidden">
+        <div className="relative h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden">
           {/* Episodes */}
           <div
             className="flex transition-transform duration-700 ease-out h-full"
@@ -86,9 +86,9 @@ export default function EpisodeCarousel() {
             {episodes.map((episode) => (
               <div
                 key={episode.id}
-                className="min-w-full h-full flex items-center justify-center px-16"
+                className="min-w-full h-full flex items-center justify-center px-4 sm:px-8 md:px-16"
               >
-                <div className="w-full max-w-[1200px] h-[420px] relative group cursor-pointer">
+                <div className="w-full max-w-[1200px] h-[260px] sm:h-[340px] md:h-[420px] relative group cursor-pointer">
                   {/* Background - Episode imagery */}
                   {episode.image ? (
                     <img
@@ -113,29 +113,29 @@ export default function EpisodeCarousel() {
                   <div className="absolute inset-0 border border-bm-accent/20 group-hover:border-bm-accent/60 transition-all duration-500" />
 
                   {/* Content */}
-                  <div className="absolute inset-0 p-16 flex flex-col justify-between">
+                  <div className="absolute inset-0 p-6 sm:p-10 md:p-16 flex flex-col justify-between">
                     {/* Top - Year badge */}
                     <div className="flex justify-end">
-                      <div className="px-4 py-2 border border-bm-gray/30 group-hover:border-bm-accent/40 transition-colors duration-300">
-                        <span className="text-[9px] font-medium tracking-[0.25em] uppercase text-bm-gray/70 group-hover:text-bm-accent transition-colors duration-300">
+                      <div className="px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 border border-bm-gray/30 group-hover:border-bm-accent/40 transition-colors duration-300">
+                        <span className="text-[7px] sm:text-[8px] md:text-[9px] font-medium tracking-[0.2em] sm:tracking-[0.25em] uppercase text-bm-gray/70 group-hover:text-bm-accent transition-colors duration-300">
                           {episode.year}
                         </span>
                       </div>
                     </div>
 
                     {/* Center - Episode Info */}
-                    <div className="text-center space-y-6">
-                      <h3 className="text-[28px] font-black tracking-[0.2em] uppercase text-bm-white group-hover:text-bm-accent transition-colors duration-500">
+                    <div className="text-center space-y-3 sm:space-y-4 md:space-y-6">
+                      <h3 className="text-[18px] sm:text-[24px] md:text-[28px] font-black tracking-[0.15em] sm:tracking-[0.18em] md:tracking-[0.2em] uppercase text-bm-white group-hover:text-bm-accent transition-colors duration-500">
                         {episode.title}
                       </h3>
-                      <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-bm-gray/80 italic">
+                      <p className="text-[9px] sm:text-[10px] md:text-[11px] font-medium tracking-[0.12em] sm:tracking-[0.15em] uppercase text-bm-gray/80 italic">
                         &ldquo;{episode.tagline}&rdquo;
                       </p>
                     </div>
 
                     {/* Bottom - Episode counter */}
                     <div className="flex justify-center">
-                      <span className="text-[9px] font-mono tracking-wider text-bm-accent/60">
+                      <span className="text-[7px] sm:text-[8px] md:text-[9px] font-mono tracking-wider text-bm-accent/60">
                         {String(episode.id).padStart(2, '0')} / {String(episodes.length).padStart(2, '0')}
                       </span>
                     </div>
@@ -153,27 +153,27 @@ export default function EpisodeCarousel() {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center border border-bm-white/20 hover:border-bm-accent hover:bg-bm-accent/10 transition-all duration-300 group"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border border-bm-white/20 hover:border-bm-accent hover:bg-bm-accent/10 transition-all duration-300 group"
             aria-label="Previous episode"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-bm-white/60 group-hover:text-bm-accent transition-colors">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="sm:w-5 sm:h-5 text-bm-white/60 group-hover:text-bm-accent transition-colors">
               <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="square"/>
             </svg>
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center border border-bm-white/20 hover:border-bm-accent hover:bg-bm-accent/10 transition-all duration-300 group"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border border-bm-white/20 hover:border-bm-accent hover:bg-bm-accent/10 transition-all duration-300 group"
             aria-label="Next episode"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-bm-white/60 group-hover:text-bm-accent transition-colors">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="sm:w-5 sm:h-5 text-bm-white/60 group-hover:text-bm-accent transition-colors">
               <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="square"/>
             </svg>
           </button>
         </div>
 
         {/* Dots Indicator */}
-        <div className="flex justify-center gap-3 mt-12">
+        <div className="flex justify-center gap-2 sm:gap-3 mt-8 sm:mt-10 md:mt-12">
           {episodes.map((_, index) => (
             <button
               key={index}

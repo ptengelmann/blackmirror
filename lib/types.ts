@@ -9,10 +9,15 @@ export interface Product {
   rating?: number;
   image?: string;
   description?: string;
+  longDescription?: string;
+  sizes?: string[];
+  stock?: number;
+  features?: string[];
 }
 
 export interface CartItem extends Product {
   quantity: number;
+  selectedSize?: string;
 }
 
 export interface EasterEgg {

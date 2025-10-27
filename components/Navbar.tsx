@@ -35,8 +35,8 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-[1800px] mx-auto px-12">
-        <div className="h-16 grid grid-cols-3 items-center">
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 md:px-12">
+        <div className="h-14 sm:h-16 grid grid-cols-3 items-center">
           {/* Left - Shop Dropdown */}
           <div
             className="relative justify-self-start"
@@ -90,7 +90,7 @@ export default function Navbar() {
 
           {/* Center - Logo */}
           <div className="group relative justify-self-center cursor-pointer">
-            <span className="text-[9px] font-black tracking-[0.25em] uppercase text-bm-white/90 group-hover:text-bm-white transition-all duration-300 relative inline-block">
+            <span className="text-[7px] sm:text-[9px] font-black tracking-[0.15em] sm:tracking-[0.25em] uppercase text-bm-white/90 group-hover:text-bm-white transition-all duration-300 relative inline-block">
               BLACK MIRROR
               {/* Subtle glow on hover */}
               <span className="absolute inset-0 opacity-0 group-hover:opacity-60 transition-opacity duration-300 blur-[2px] text-bm-accent" aria-hidden="true">
@@ -107,7 +107,7 @@ export default function Navbar() {
           </div>
 
           {/* Right - Custom Black Mirror Icons */}
-          <div className="flex items-center gap-8 justify-self-end">
+          <div className="flex items-center gap-4 sm:gap-6 md:gap-8 justify-self-end">
             {/* User Icon - Custom Black Mirror style */}
             <button className="relative group w-5 h-5">
               <div className="relative">
@@ -124,7 +124,7 @@ export default function Navbar() {
             </button>
 
             {/* Cart Icon - Custom Black Mirror style */}
-            <button className="relative group w-5 h-5">
+            <button onClick={() => (window.location.href = '/cart')} className="relative group w-5 h-5">
               <div className="relative">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-bm-white/50 group-hover:text-bm-accent transition-all duration-300">
                   <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square" strokeLinejoin="miter"/>

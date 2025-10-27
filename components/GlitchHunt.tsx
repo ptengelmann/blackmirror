@@ -54,7 +54,7 @@ export default function GlitchHunt() {
   return (
     <section
       id="reality"
-      className="py-32 px-10 relative"
+      className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-10 relative"
       style={{
         background:
           'linear-gradient(135deg, rgba(139, 92, 246, 0.02) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(255, 0, 51, 0.02) 0%, transparent 70%)',
@@ -67,7 +67,7 @@ export default function GlitchHunt() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-6xl font-bold mb-6 text-glitch"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 text-glitch"
         >
           CAN YOU FIND THE GLITCH?
         </motion.h2>
@@ -77,7 +77,7 @@ export default function GlitchHunt() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-lg text-gray-400 mb-10 leading-8"
+          className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 sm:mb-10 leading-6 sm:leading-7 md:leading-8 px-4"
         >
           Hidden across the site are <span className="text-bm-cyan neon-glow">special codes</span>.
           <br />
@@ -90,7 +90,7 @@ export default function GlitchHunt() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="flex gap-3 max-w-lg mx-auto mb-5"
+          className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-5 px-4"
         >
           <input
             id="secret-code-input"
@@ -100,14 +100,14 @@ export default function GlitchHunt() {
             onKeyPress={(e) => e.key === 'Enter' && handleUnlock()}
             placeholder="ENTER_SECRET_CODE"
             maxLength={20}
-            className="flex-1 px-6 py-4 bg-white/3 border-2 border-white/10 rounded-xl text-white font-mono tracking-[2px] uppercase outline-none focus:border-bm-red focus:shadow-[0_0_15px_rgba(255,0,51,0.3)] focus:bg-bm-red/3 transition-all"
+            className="flex-1 px-4 sm:px-6 py-3 sm:py-4 bg-white/3 border-2 border-white/10 rounded-xl text-white font-mono text-xs sm:text-sm tracking-[1.5px] sm:tracking-[2px] uppercase outline-none focus:border-bm-red focus:shadow-[0_0_15px_rgba(255,0,51,0.3)] focus:bg-bm-red/3 transition-all"
           />
           <button
             onClick={handleUnlock}
-            className="px-8 py-4 bg-bm-red text-white rounded-xl font-bold tracking-[2px] flex items-center gap-2.5 hover:shadow-[0_0_20px_rgba(255,0,51,0.5)] hover:-translate-y-0.5 transition-all"
+            className="px-6 sm:px-8 py-3 sm:py-4 bg-bm-red text-white rounded-xl font-bold text-xs sm:text-sm tracking-[1.5px] sm:tracking-[2px] flex items-center justify-center gap-2 sm:gap-2.5 hover:shadow-[0_0_20px_rgba(255,0,51,0.5)] hover:-translate-y-0.5 transition-all"
           >
             <span>UNLOCK</span>
-            <Lock size={20} />
+            <Lock size={16} className="sm:w-5 sm:h-5" />
           </button>
         </motion.div>
 
@@ -117,7 +117,7 @@ export default function GlitchHunt() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
-          className="font-mono text-sm text-gray-400 mb-10"
+          className="font-mono text-xs sm:text-sm text-gray-400 mb-8 sm:mb-10 px-4"
         >
           HINT: <span className="text-white">{hint}</span>
         </motion.div>
@@ -128,12 +128,12 @@ export default function GlitchHunt() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8 }}
-          className="inline-flex items-center gap-3 px-6 py-3 bg-bm-purple/5 border border-bm-purple/30 rounded-full"
+          className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-bm-purple/5 border border-bm-purple/30 rounded-full mx-4"
         >
-          <span className="font-mono text-2xl font-bold text-bm-purple neon-glow">
+          <span className="font-mono text-xl sm:text-2xl font-bold text-bm-purple neon-glow">
             {foundCodes.size}/7
           </span>
-          <span className="text-xs text-gray-400 tracking-[2px]">GLITCHES FOUND</span>
+          <span className="text-[10px] sm:text-xs text-gray-400 tracking-[1.5px] sm:tracking-[2px]">GLITCHES FOUND</span>
         </motion.div>
       </div>
 
