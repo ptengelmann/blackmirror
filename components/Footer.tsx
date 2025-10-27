@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { useStore } from '@/lib/store';
 
 export default function Footer() {
   const { setEasterEggMessage, addFoundCode } = useStore();
+  const [isDead, setIsDead] = useState(false);
 
   const handleKonamiTrigger = () => {
     setEasterEggMessage('CHEAT CODE ACTIVATED. Code: CHOICE10');
@@ -62,23 +65,23 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a href="#shop" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
-                  All Categories
+                <a href="/" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
+                  Home
                 </a>
               </li>
               <li>
-                <a href="#shop" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
-                  Shop
+                <a href="/collections" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
+                  Collections
+                </a>
+              </li>
+              <li>
+                <a href="/cart" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
+                  Cart
                 </a>
               </li>
               <li>
                 <a href="#episodes" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
-                  Contact
+                  Episodes
                 </a>
               </li>
             </ul>
@@ -91,60 +94,95 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a href="#" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
+                <a href="/terms" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
                   Terms & Conditions
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
-                  Shipping
+                <a href="/returns" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
+                  Delivery & Returns
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
-                  Returns
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
+                <a href="/faq" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
                   FAQs
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h4 className="text-[8px] sm:text-[9px] font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase text-bm-white mb-4 sm:mb-5 md:mb-6">
-              Reality Check
-            </h4>
-            <ul className="space-y-3 sm:space-y-4">
-              <li className="flex gap-2 sm:gap-3 text-bm-gray/60 text-[8px] sm:text-[9px] tracking-[0.05em]">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-bm-accent mt-0.5 flex-shrink-0">
-                  <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" strokeWidth="2"/>
-                  <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2"/>
-                </svg>
-                <span>16 Chemin De La Madrague-Ville<br />13015 Marseille</span>
-              </li>
-              <li className="flex gap-2 sm:gap-3 text-bm-gray/60 text-[8px] sm:text-[9px] tracking-[0.05em]">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" className="sm:w-3 sm:h-3 text-bm-accent mt-0.5 flex-shrink-0">
-                  <path d="M22 16.92V19.92C22 20.4728 21.5523 20.92 21 20.92H19C8.50659 20.92 0 12.4134 0 1.92V1.92C0 1.36772 0.447715 0.92 1 0.92H4C4.55228 0.92 5 1.36772 5 1.92V5.92L3 7.92C3 12.34 6.58 15.92 11 15.92L13 13.92H17C17.5523 13.92 18 14.3677 18 14.92V16.92C18 17.4723 18.4477 17.92 19 17.92H21C21.5523 17.92 22 17.3677 22 16.92Z" stroke="currentColor" strokeWidth="2"/>
-                </svg>
-                <span>+33 (0)4 91 02 92 22</span>
-              </li>
-              <li className="flex gap-2 sm:gap-3 text-bm-gray/60 text-[8px] sm:text-[9px] tracking-[0.05em]">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" className="sm:w-3 sm:h-3 text-bm-accent mt-0.5 flex-shrink-0">
-                  <rect x="3" y="5" width="18" height="14" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M3 5L12 13L21 5" stroke="currentColor" strokeWidth="2"/>
-                </svg>
-                <span>reality@blackmirror.store</span>
-              </li>
-            </ul>
+          {/* Thrognlet */}
+          <div className="flex items-center justify-center">
+            <div className="relative w-full max-w-[200px]">
+              <motion.div
+                className="relative cursor-pointer"
+                onMouseEnter={() => {
+                  if (!isDead) {
+                    setIsDead(true);
+                    // Respawn after 3 seconds
+                    setTimeout(() => setIsDead(false), 3000);
+                  }
+                }}
+                animate={isDead ? {} : { x: [-30, 70, -30] }}
+                transition={
+                  isDead
+                    ? {}
+                    : {
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }
+                }
+              >
+                {/* Thrognlet Image */}
+                <motion.img
+                  src={isDead ? '/thronglet-dead.png' : '/thronglet-live.png'}
+                  alt="Thrognlet"
+                  className="w-32 h-32 object-contain"
+                  animate={
+                    isDead
+                      ? {
+                          rotate: [0, -10, 10, -5, 5, 0],
+                          scale: [1, 0.95, 1.05, 0.98, 1],
+                        }
+                      : {}
+                  }
+                  transition={
+                    isDead
+                      ? {
+                          duration: 0.5,
+                          ease: "easeInOut",
+                        }
+                      : {}
+                  }
+                />
+
+                {/* Death Glitch Effect */}
+                {isDead && (
+                  <motion.div
+                    className="absolute inset-0"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: [0, 1, 0, 1, 0] }}
+                    transition={{ duration: 0.3, repeat: 2 }}
+                  >
+                    <img
+                      src="/thronglet-dead.png"
+                      alt=""
+                      className="w-32 h-32 object-contain opacity-50"
+                      style={{
+                        transform: 'translate(-2px, 1px)',
+                        filter: 'hue-rotate(180deg)',
+                      }}
+                    />
+                  </motion.div>
+                )}
+              </motion.div>
+
+              {/* Hover hint */}
+              <p className="text-[7px] text-bm-gray/40 tracking-[0.15em] uppercase text-center mt-2">
+                {isDead ? 'Respawning...' : 'Hover to eliminate'}
+              </p>
+            </div>
           </div>
         </div>
 
