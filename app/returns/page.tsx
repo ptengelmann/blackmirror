@@ -109,7 +109,7 @@ export default function ReturnsPage() {
 
               <div>
                 <h3 className="text-[12px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Tracking</h3>
-                <p>All orders include tracking. You'll receive updates via email as your package moves through the delivery network.</p>
+                <p>All orders include tracking. You&apos;ll receive updates via email as your package moves through the delivery network.</p>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@ export default function ReturnsPage() {
               Returns Policy
             </h2>
             <div className="text-[11px] sm:text-[12px] text-bm-gray/80 leading-relaxed tracking-[0.02em] pl-5 space-y-4">
-              <p>We want you to be completely satisfied with your purchase. If you're not happy, we offer a 30-day return policy.</p>
+              <p>We want you to be completely satisfied with your purchase. If you&apos;re not happy, we offer a 30-day return policy.</p>
 
               <div>
                 <h3 className="text-[12px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Eligibility</h3>
@@ -154,7 +154,7 @@ export default function ReturnsPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-bm-accent font-mono">02.</span>
-                    <span>We'll provide you with a return shipping label and instructions</span>
+                    <span>We&apos;ll provide you with a return shipping label and instructions</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-bm-accent font-mono">03.</span>
@@ -166,7 +166,7 @@ export default function ReturnsPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-bm-accent font-mono">05.</span>
-                    <span>Once received and inspected, we'll process your refund</span>
+                    <span>Once received and inspected, we&apos;ll process your refund</span>
                   </li>
                 </ol>
               </div>
@@ -178,7 +178,7 @@ export default function ReturnsPage() {
 
               <div>
                 <h3 className="text-[12px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Return Shipping</h3>
-                <p>Return shipping is FREE for all customers. We'll provide a prepaid return label via email.</p>
+                <p>Return shipping is FREE for all customers. We&apos;ll provide a prepaid return label via email.</p>
               </div>
             </div>
           </div>
@@ -190,8 +190,8 @@ export default function ReturnsPage() {
               Exchanges
             </h2>
             <div className="text-[11px] sm:text-[12px] text-bm-gray/80 leading-relaxed tracking-[0.02em] pl-5 space-y-3">
-              <p>Need a different size or color? We're happy to help!</p>
-              <p>Contact us at <a href="mailto:reality@blackmirror.store" className="text-bm-accent hover:underline">reality@blackmirror.store</a> to arrange an exchange. We'll send you the new item and provide a return label for the original.</p>
+              <p>Need a different size or color? We&apos;re happy to help!</p>
+              <p>Contact us at <a href="mailto:reality@blackmirror.store" className="text-bm-accent hover:underline">reality@blackmirror.store</a> to arrange an exchange. We&apos;ll send you the new item and provide a return label for the original.</p>
             </div>
           </div>
 
@@ -203,7 +203,7 @@ export default function ReturnsPage() {
             </h2>
             <div className="text-[11px] sm:text-[12px] text-bm-gray/80 leading-relaxed tracking-[0.02em] pl-5 space-y-3">
               <p>If you receive a damaged or defective item, please contact us immediately at <a href="mailto:reality@blackmirror.store" className="text-bm-accent hover:underline">reality@blackmirror.store</a> with photos of the damage.</p>
-              <p>We'll arrange for a replacement to be sent to you at no charge, or issue a full refund if preferred.</p>
+              <p>We&apos;ll arrange for a replacement to be sent to you at no charge, or issue a full refund if preferred.</p>
             </div>
           </div>
 

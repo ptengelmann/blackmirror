@@ -152,7 +152,7 @@ export default function FAQPage() {
                 Still Have Questions?
               </h2>
               <p className="text-[11px] sm:text-[12px] text-bm-gray/80 leading-relaxed tracking-[0.02em] max-w-[500px] mx-auto">
-                Can't find the answer you're looking for? Our support team is here to help. Reach out and we'll get back to you within 24 hours.
+                Can&apos;t find the answer you&apos;re looking for? Our support team is here to help. Reach out and we&apos;ll get back to you within 24 hours.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">

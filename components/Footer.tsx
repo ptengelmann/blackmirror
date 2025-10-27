@@ -65,7 +65,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a href="/" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
+                <a href="#" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }} className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
                   Home
                 </a>
               </li>

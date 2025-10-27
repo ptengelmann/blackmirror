@@ -59,7 +59,7 @@ export default function NotFound() {
             {/* Message */}
             <div className="space-y-4 max-w-[500px] mx-auto">
               <p className="text-[12px] sm:text-[13px] text-bm-gray/80 leading-relaxed tracking-[0.05em]">
-                The page you're looking for has been lost in the digital void. It may have been deleted, moved, or never existed in the first place.
+                The page you&apos;re looking for has been lost in the digital void. It may have been deleted, moved, or never existed in the first place.
               </p>
 
               <p className="text-[10px] sm:text-[11px] text-bm-pink/60 font-mono tracking-[0.1em] uppercase">
