@@ -26,10 +26,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 lg:gap-16 mb-10 sm:mb-12 md:mb-16">
           {/* Brand */}
           <div className="space-y-4 sm:space-y-5 md:space-y-6">
-            <h3 className="text-[10px] sm:text-[11px] md:text-[12px] font-black tracking-[0.25em] sm:tracking-[0.3em] uppercase text-bm-white">
+            <h3 className="text-[16px] sm:text-[17px] md:text-[15px] font-black tracking-[0.25em] sm:tracking-[0.3em] uppercase text-bm-white">
               Black Mirror
             </h3>
-            <p className="text-[8px] sm:text-[9px] text-bm-gray/70 leading-relaxed tracking-[0.05em] max-w-[280px]">
+            <p className="text-[17px] sm:text-[15px] text-bm-gray/70 leading-relaxed tracking-[0.05em] max-w-[280px]">
               Step beyond the screen. Explore reflections of distorted reality. Every product is a story, every glitch a mirror.
             </p>
             {/* Social Links */}
@@ -38,21 +38,21 @@ export default function Footer() {
                 href="#"
                 className="relative w-10 h-10 flex items-center justify-center border border-bm-gray/20 hover:border-bm-accent transition-all duration-300 group overflow-hidden"
               >
-                <span className="text-[10px] text-bm-gray/60 group-hover:text-bm-accent transition-colors relative z-10">𝕏</span>
+                <span className="text-[16px] text-bm-gray/60 group-hover:text-bm-accent transition-colors relative z-10">𝕏</span>
                 <div className="absolute inset-0 bg-bm-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </a>
               <a
                 href="#"
                 className="relative w-10 h-10 flex items-center justify-center border border-bm-gray/20 hover:border-bm-accent transition-all duration-300 group overflow-hidden"
               >
-                <span className="text-[10px] text-bm-gray/60 group-hover:text-bm-accent transition-colors relative z-10">IG</span>
+                <span className="text-[16px] text-bm-gray/60 group-hover:text-bm-accent transition-colors relative z-10">IG</span>
                 <div className="absolute inset-0 bg-bm-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </a>
               <a
                 href="#"
                 className="relative w-10 h-10 flex items-center justify-center border border-bm-gray/20 hover:border-bm-accent transition-all duration-300 group overflow-hidden"
               >
-                <span className="text-[10px] text-bm-gray/60 group-hover:text-bm-accent transition-colors relative z-10">TT</span>
+                <span className="text-[16px] text-bm-gray/60 group-hover:text-bm-accent transition-colors relative z-10">TT</span>
                 <div className="absolute inset-0 bg-bm-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </a>
             </div>
@@ -60,27 +60,27 @@ export default function Footer() {
 
           {/* Menu */}
           <div>
-            <h4 className="text-[8px] sm:text-[9px] font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase text-bm-white mb-4 sm:mb-5 md:mb-6">
+            <h4 className="text-[17px] sm:text-[15px] font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase text-bm-white mb-4 sm:mb-5 md:mb-6">
               Navigate
             </h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a href="#" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }} className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
+                <a href="#" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }} className="text-[17px] sm:text-[15px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/collections" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
+                <a href="/collections" className="text-[17px] sm:text-[15px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
                   Collections
                 </a>
               </li>
               <li>
-                <a href="/cart" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
+                <a href="/cart" className="text-[17px] sm:text-[15px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
                   Cart
                 </a>
               </li>
               <li>
-                <a href="#episodes" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
+                <a href="#episodes" className="text-[17px] sm:text-[15px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
                   Episodes
                 </a>
               </li>
@@ -89,22 +89,22 @@ export default function Footer() {
 
           {/* Support */}
           <div>
-            <h4 className="text-[8px] sm:text-[9px] font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase text-bm-white mb-4 sm:mb-5 md:mb-6">
+            <h4 className="text-[17px] sm:text-[15px] font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase text-bm-white mb-4 sm:mb-5 md:mb-6">
               Support
             </h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a href="/terms" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
+                <a href="/terms" className="text-[17px] sm:text-[15px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
                   Terms & Conditions
                 </a>
               </li>
               <li>
-                <a href="/returns" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
+                <a href="/returns" className="text-[17px] sm:text-[15px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
                   Delivery & Returns
                 </a>
               </li>
               <li>
-                <a href="/faq" className="text-[8px] sm:text-[9px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
+                <a href="/faq" className="text-[17px] sm:text-[15px] text-bm-gray/60 hover:text-bm-accent tracking-[0.08em] sm:tracking-[0.1em] uppercase transition-colors duration-300">
                   FAQs
                 </a>
               </li>
@@ -138,7 +138,7 @@ export default function Footer() {
                 <motion.img
                   src={isDead ? '/thronglet-dead.png' : '/thronglet-live.png'}
                   alt="Thrognlet"
-                  className="w-32 h-32 object-contain"
+                  className="w-40 h-40 object-contain"
                   animate={
                     isDead
                       ? {
@@ -168,7 +168,7 @@ export default function Footer() {
                     <img
                       src="/thronglet-dead.png"
                       alt=""
-                      className="w-32 h-32 object-contain opacity-50"
+                      className="w-40 h-40 object-contain opacity-50"
                       style={{
                         transform: 'translate(-2px, 1px)',
                         filter: 'hue-rotate(180deg)',
@@ -179,7 +179,7 @@ export default function Footer() {
               </motion.div>
 
               {/* Hover hint */}
-              <p className="text-[7px] text-bm-gray/40 tracking-[0.15em] uppercase text-center mt-2">
+              <p className="text-[16px] text-bm-gray/40 tracking-[0.15em] uppercase text-center mt-2">
                 {isDead ? 'Respawning...' : 'Hover to eliminate'}
               </p>
             </div>
@@ -192,12 +192,12 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 md:gap-6">
-            <p className="text-[7px] sm:text-[8px] text-bm-gray/50 tracking-[0.08em] sm:tracking-[0.1em] uppercase text-center">
+            <p className="text-[16px] sm:text-[17px] text-bm-gray/50 tracking-[0.08em] sm:tracking-[0.1em] uppercase text-center">
               © 2025 Black Mirror Store. All realities reserved.
             </p>
             <button
               onClick={handleKonamiTrigger}
-              className="text-[7px] sm:text-[8px] text-bm-gray/20 hover:text-bm-accent font-mono tracking-wider transition-colors duration-300"
+              className="text-[16px] sm:text-[17px] text-bm-gray/20 hover:text-bm-accent font-mono tracking-wider transition-colors duration-300"
             >
               ↑↑↓↓←→←→BA
             </button>
@@ -205,15 +205,15 @@ export default function Footer() {
 
           {/* Security Badges */}
           <div className="flex gap-2 sm:gap-3">
-            <span className="relative px-2 sm:px-3 py-1 sm:py-1.5 border border-bm-accent/20 text-[6px] sm:text-[7px] font-mono tracking-[0.12em] sm:tracking-[0.15em] text-bm-accent/60 uppercase hover:border-bm-accent/40 hover:text-bm-accent/80 transition-all duration-300 cursor-default group overflow-hidden">
+            <span className="relative px-2 sm:px-3 py-1 sm:py-1.5 border border-bm-accent/20 text-[15px] sm:text-[16px] font-mono tracking-[0.12em] sm:tracking-[0.15em] text-bm-accent/60 uppercase hover:border-bm-accent/40 hover:text-bm-accent/80 transition-all duration-300 cursor-default group overflow-hidden">
               <span className="relative z-10">Secure</span>
               <div className="absolute inset-0 bg-bm-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </span>
-            <span className="relative px-2 sm:px-3 py-1 sm:py-1.5 border border-bm-accent/20 text-[6px] sm:text-[7px] font-mono tracking-[0.12em] sm:tracking-[0.15em] text-bm-accent/60 uppercase hover:border-bm-accent/40 hover:text-bm-accent/80 transition-all duration-300 cursor-default group overflow-hidden">
+            <span className="relative px-2 sm:px-3 py-1 sm:py-1.5 border border-bm-accent/20 text-[15px] sm:text-[16px] font-mono tracking-[0.12em] sm:tracking-[0.15em] text-bm-accent/60 uppercase hover:border-bm-accent/40 hover:text-bm-accent/80 transition-all duration-300 cursor-default group overflow-hidden">
               <span className="relative z-10">Encrypted</span>
               <div className="absolute inset-0 bg-bm-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </span>
-            <span className="relative px-2 sm:px-3 py-1 sm:py-1.5 border border-bm-accent/20 text-[6px] sm:text-[7px] font-mono tracking-[0.12em] sm:tracking-[0.15em] text-bm-accent/60 uppercase hover:border-bm-accent/40 hover:text-bm-accent/80 transition-all duration-300 cursor-default group overflow-hidden">
+            <span className="relative px-2 sm:px-3 py-1 sm:py-1.5 border border-bm-accent/20 text-[15px] sm:text-[16px] font-mono tracking-[0.12em] sm:tracking-[0.15em] text-bm-accent/60 uppercase hover:border-bm-accent/40 hover:text-bm-accent/80 transition-all duration-300 cursor-default group overflow-hidden">
               <span className="relative z-10">Anonymous</span>
               <div className="absolute inset-0 bg-bm-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </span>

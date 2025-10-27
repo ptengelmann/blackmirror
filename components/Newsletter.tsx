@@ -34,7 +34,7 @@ export default function Newsletter() {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 mb-12 sm:mb-14 md:mb-16">
         <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
           <div className="h-[1px] w-8 sm:w-12 md:w-16 bg-bm-accent" />
-          <h2 className="text-[9px] sm:text-[10px] md:text-[11px] font-black tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase text-bm-white">
+          <h2 className="text-[15px] sm:text-[16px] md:text-[17px] font-black tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase text-bm-white">
             Join The Loop
           </h2>
           <div className="h-[1px] flex-1 bg-gradient-to-r from-bm-accent/50 to-transparent" />
@@ -64,7 +64,7 @@ export default function Newsletter() {
                   Subscribe to Reality
                 </span>
               </h3>
-              <p className="text-[8px] sm:text-[9px] md:text-[10px] tracking-[0.12em] sm:tracking-[0.15em] uppercase text-bm-gray/70 max-w-[600px] mx-auto px-4">
+              <p className="text-[17px] sm:text-[15px] md:text-[16px] tracking-[0.12em] sm:tracking-[0.15em] uppercase text-bm-gray/70 max-w-[600px] mx-auto px-4">
                 Early access to new drops • Hidden collections • Exclusive codes
               </p>
             </div>
@@ -79,7 +79,7 @@ export default function Newsletter() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="your.reality@email.com"
                   required
-                  className="w-full px-4 sm:px-5 md:px-6 py-3 sm:py-3.5 md:py-4 bg-bm-rich-black border border-bm-gray/20 text-bm-white text-[9px] sm:text-[9px] md:text-[10px] tracking-[0.08em] sm:tracking-[0.1em] uppercase placeholder:text-bm-gray/40 focus:border-bm-accent focus:outline-none transition-all duration-300"
+                  className="w-full px-4 sm:px-5 md:px-6 py-3 sm:py-3.5 md:py-4 bg-bm-rich-black border border-bm-gray/20 text-bm-white text-[15px] sm:text-[15px] md:text-[16px] tracking-[0.08em] sm:tracking-[0.1em] uppercase placeholder:text-bm-gray/40 focus:border-bm-accent focus:outline-none transition-all duration-300"
                 />
                 {/* Input border glow on focus */}
                 <div className="absolute inset-0 border border-bm-accent/0 group-focus-within/input:border-bm-accent/40 transition-all duration-300 pointer-events-none" />
@@ -93,7 +93,7 @@ export default function Newsletter() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full px-6 sm:px-8 py-3 sm:py-3.5 md:py-4 bg-bm-accent text-bm-rich-black text-[9px] sm:text-[9px] md:text-[10px] font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase hover:bg-bm-white transition-all duration-300 relative overflow-hidden group/btn"
+                className="w-full px-6 sm:px-8 py-3 sm:py-3.5 md:py-4 bg-bm-accent text-bm-rich-black text-[15px] sm:text-[15px] md:text-[16px] font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase hover:bg-bm-white transition-all duration-300 relative overflow-hidden group/btn"
               >
                 <span className="relative z-10">Enter The Loop</span>
 
@@ -114,7 +114,7 @@ export default function Newsletter() {
                 <rect x="3" y="11" width="18" height="11" stroke="currentColor" strokeWidth="2"/>
                 <path d="M7 11V7C7 4.79086 8.79086 3 11 3H13C15.2091 3 17 4.79086 17 7V11" stroke="currentColor" strokeWidth="2"/>
               </svg>
-              <p className="text-[7px] sm:text-[8px] tracking-[0.12em] sm:tracking-[0.15em] uppercase text-bm-gray/60 text-center">
+              <p className="text-[16px] sm:text-[17px] tracking-[0.12em] sm:tracking-[0.15em] uppercase text-bm-gray/60 text-center">
                 Your data remains yours. We don&apos;t stream your reality.
               </p>
             </div>

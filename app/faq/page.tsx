@@ -83,7 +83,7 @@ export default function FAQPage() {
           className="group flex items-center gap-3 mb-8 sm:mb-12 text-bm-gray/60 hover:text-bm-accent transition-colors duration-300"
         >
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform duration-300" />
-          <span className="text-[9px] font-bold tracking-[0.2em] uppercase">Back</span>
+          <span className="text-[15px] font-bold tracking-[0.2em] uppercase">Back</span>
         </button>
 
         {/* Header */}
@@ -94,7 +94,7 @@ export default function FAQPage() {
               FAQs
             </h1>
           </div>
-          <p className="text-[10px] text-bm-gray/70 tracking-[0.15em] uppercase ml-[88px]">
+          <p className="text-[16px] text-bm-gray/70 tracking-[0.15em] uppercase ml-[88px]">
             Frequently Asked Questions
           </p>
         </div>
@@ -114,7 +114,7 @@ export default function FAQPage() {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="relative w-full px-6 py-5 flex items-center justify-between text-left group"
               >
-                <span className="text-[11px] sm:text-[12px] font-bold tracking-[0.1em] uppercase text-bm-white group-hover:text-bm-accent transition-colors duration-300">
+                <span className="text-[17px] sm:text-[15px] font-bold tracking-[0.1em] uppercase text-bm-white group-hover:text-bm-accent transition-colors duration-300">
                   {faq.question}
                 </span>
                 <ChevronDown
@@ -133,7 +133,7 @@ export default function FAQPage() {
               >
                 <div className="relative px-6 pb-5">
                   <div className="h-[1px] bg-gradient-to-r from-bm-accent/30 to-transparent mb-4" />
-                  <p className="text-[10px] sm:text-[11px] text-bm-gray/80 leading-relaxed tracking-[0.02em]">
+                  <p className="text-[16px] sm:text-[17px] text-bm-gray/80 leading-relaxed tracking-[0.02em]">
                     {faq.answer}
                   </p>
                 </div>
@@ -151,14 +151,14 @@ export default function FAQPage() {
               <h2 className="text-[20px] sm:text-[24px] font-black tracking-[0.15em] uppercase text-bm-white">
                 Still Have Questions?
               </h2>
-              <p className="text-[11px] sm:text-[12px] text-bm-gray/80 leading-relaxed tracking-[0.02em] max-w-[500px] mx-auto">
+              <p className="text-[17px] sm:text-[15px] text-bm-gray/80 leading-relaxed tracking-[0.02em] max-w-[500px] mx-auto">
                 Can&apos;t find the answer you&apos;re looking for? Our support team is here to help. Reach out and we&apos;ll get back to you within 24 hours.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
                 <a
                   href="mailto:reality@blackmirror.store"
-                  className="group px-8 py-4 border border-bm-accent text-bm-accent text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-bm-accent hover:text-bm-rich-black transition-all duration-300 relative overflow-hidden"
+                  className="group px-8 py-4 border border-bm-accent text-bm-accent text-[16px] font-bold tracking-[0.2em] uppercase hover:bg-bm-accent hover:text-bm-rich-black transition-all duration-300 relative overflow-hidden"
                 >
                   <span className="relative z-10">Email Support</span>
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 scanlines pointer-events-none transition-opacity duration-300" />
@@ -166,7 +166,7 @@ export default function FAQPage() {
 
                 <a
                   href="tel:+33491029222"
-                  className="group px-8 py-4 border border-bm-gray/30 text-bm-gray/70 text-[10px] font-bold tracking-[0.2em] uppercase hover:border-bm-accent hover:text-bm-accent transition-all duration-300"
+                  className="group px-8 py-4 border border-bm-gray/30 text-bm-gray/70 text-[16px] font-bold tracking-[0.2em] uppercase hover:border-bm-accent hover:text-bm-accent transition-all duration-300"
                 >
                   +33 (0)4 91 02 92 22
                 </a>

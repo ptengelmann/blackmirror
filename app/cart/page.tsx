@@ -24,13 +24,13 @@ export default function CartPage() {
               <h1 className="text-[28px] sm:text-[36px] font-black tracking-[0.2em] uppercase text-bm-white">
                 Your Cart is Empty
               </h1>
-              <p className="text-[11px] text-bm-gray/70 tracking-[0.1em] uppercase max-w-md">
+              <p className="text-[17px] text-bm-gray/70 tracking-[0.1em] uppercase max-w-md">
                 No items in your reality yet. Start exploring our collection.
               </p>
             </div>
             <button
               onClick={() => router.push('/')}
-              className="group px-8 py-4 border border-bm-accent text-bm-accent text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-bm-accent hover:text-bm-rich-black transition-all duration-300 relative overflow-hidden"
+              className="group px-8 py-4 border border-bm-accent text-bm-accent text-[16px] font-bold tracking-[0.2em] uppercase hover:bg-bm-accent hover:text-bm-rich-black transition-all duration-300 relative overflow-hidden"
             >
               <span className="relative z-10">Continue Shopping</span>
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 scanlines pointer-events-none transition-opacity duration-300" />
@@ -54,12 +54,12 @@ export default function CartPage() {
             className="group flex items-center gap-3 text-bm-gray/60 hover:text-bm-accent transition-colors duration-300"
           >
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform duration-300" />
-            <span className="text-[9px] font-bold tracking-[0.2em] uppercase">Back</span>
+            <span className="text-[15px] font-bold tracking-[0.2em] uppercase">Back</span>
           </button>
 
           <button
             onClick={clearCart}
-            className="text-[9px] font-bold tracking-[0.2em] uppercase text-bm-gray/60 hover:text-bm-red transition-colors duration-300"
+            className="text-[15px] font-bold tracking-[0.2em] uppercase text-bm-gray/60 hover:text-bm-red transition-colors duration-300"
           >
             Clear Cart
           </button>
@@ -73,7 +73,7 @@ export default function CartPage() {
               Shopping Cart
             </h1>
           </div>
-          <p className="text-[10px] text-bm-gray/70 tracking-[0.15em] uppercase ml-[88px]">
+          <p className="text-[16px] text-bm-gray/70 tracking-[0.15em] uppercase ml-[88px]">
             {itemCount} {itemCount === 1 ? 'Item' : 'Items'} in your reality
           </p>
         </div>
@@ -98,14 +98,14 @@ export default function CartPage() {
                   {/* Product Info */}
                   <div className="flex-1 space-y-4">
                     <div>
-                      <h3 className="text-[14px] sm:text-[16px] font-bold tracking-[0.1em] uppercase text-bm-white mb-2">
+                      <h3 className="text-[17px] sm:text-[16px] font-bold tracking-[0.1em] uppercase text-bm-white mb-2">
                         {item.title}
                       </h3>
-                      <p className="text-[9px] text-bm-gray/60 tracking-[0.15em] uppercase">
+                      <p className="text-[15px] text-bm-gray/60 tracking-[0.15em] uppercase">
                         {item.category}
                       </p>
                       {item.selectedSize && (
-                        <p className="text-[9px] text-bm-accent tracking-[0.15em] uppercase mt-1">
+                        <p className="text-[15px] text-bm-accent tracking-[0.15em] uppercase mt-1">
                           Size: {item.selectedSize}
                         </p>
                       )}
@@ -126,7 +126,7 @@ export default function CartPage() {
                         >
                           <Minus size={14} />
                         </button>
-                        <span className="text-[14px] font-mono font-bold text-bm-white w-8 text-center">
+                        <span className="text-[17px] font-mono font-bold text-bm-white w-8 text-center">
                           {item.quantity}
                         </span>
                         <button
@@ -175,28 +175,28 @@ export default function CartPage() {
                   {/* Details */}
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
-                      <span className="text-[10px] tracking-[0.15em] uppercase text-bm-gray/70">
+                      <span className="text-[16px] tracking-[0.15em] uppercase text-bm-gray/70">
                         Subtotal
                       </span>
-                      <span className="text-[14px] font-mono font-bold text-bm-white">
+                      <span className="text-[17px] font-mono font-bold text-bm-white">
                         ${total.toFixed(2)}
                       </span>
                     </div>
 
                     <div className="flex justify-between items-center">
-                      <span className="text-[10px] tracking-[0.15em] uppercase text-bm-gray/70">
+                      <span className="text-[16px] tracking-[0.15em] uppercase text-bm-gray/70">
                         Shipping
                       </span>
-                      <span className="text-[12px] font-mono text-bm-accent">
+                      <span className="text-[15px] font-mono text-bm-accent">
                         FREE
                       </span>
                     </div>
 
                     <div className="flex justify-between items-center">
-                      <span className="text-[10px] tracking-[0.15em] uppercase text-bm-gray/70">
+                      <span className="text-[16px] tracking-[0.15em] uppercase text-bm-gray/70">
                         Tax
                       </span>
-                      <span className="text-[14px] font-mono font-bold text-bm-white">
+                      <span className="text-[17px] font-mono font-bold text-bm-white">
                         ${(total * 0.1).toFixed(2)}
                       </span>
                     </div>
@@ -207,7 +207,7 @@ export default function CartPage() {
 
                   {/* Total */}
                   <div className="flex justify-between items-baseline">
-                    <span className="text-[12px] font-bold tracking-[0.2em] uppercase text-bm-white">
+                    <span className="text-[15px] font-bold tracking-[0.2em] uppercase text-bm-white">
                       Total
                     </span>
                     <span className="text-[28px] font-mono font-black text-bm-accent">
@@ -217,7 +217,7 @@ export default function CartPage() {
 
                   {/* Checkout Button */}
                   <button
-                    className="group w-full px-8 py-5 bg-bm-white text-bm-rich-black text-[11px] font-bold tracking-[0.25em] uppercase hover:bg-bm-accent transition-all duration-300 relative overflow-hidden"
+                    className="group w-full px-8 py-5 bg-bm-white text-bm-rich-black text-[17px] font-bold tracking-[0.25em] uppercase hover:bg-bm-accent transition-all duration-300 relative overflow-hidden"
                   >
                     <span className="relative z-10">Proceed to Checkout</span>
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 scanlines pointer-events-none transition-opacity duration-300" />
@@ -226,7 +226,7 @@ export default function CartPage() {
                   {/* Continue Shopping */}
                   <button
                     onClick={() => router.push('/collections')}
-                    className="w-full px-8 py-4 border border-bm-gray/30 text-bm-gray/70 text-[10px] font-bold tracking-[0.2em] uppercase hover:border-bm-accent hover:text-bm-accent transition-all duration-300"
+                    className="w-full px-8 py-4 border border-bm-gray/30 text-bm-gray/70 text-[16px] font-bold tracking-[0.2em] uppercase hover:border-bm-accent hover:text-bm-accent transition-all duration-300"
                   >
                     Continue Shopping
                   </button>

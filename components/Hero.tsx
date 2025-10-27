@@ -25,8 +25,8 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6">
             {/* Shop Now - Primary CTA */}
             <a
-              href="#shop"
-              className="group relative px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-bm-white text-bm-rich-black text-[9px] sm:text-[10px] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase transition-all duration-300 overflow-hidden text-center"
+              href="/collections"
+              className="group relative px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-bm-white text-bm-rich-black text-[15px] sm:text-[16px] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase transition-all duration-300 overflow-hidden text-center"
             >
               <span className="relative z-10">Shop Now</span>
               {/* Hover effect - slide from left */}
@@ -42,7 +42,7 @@ export default function Hero() {
                 setEasterEggMessage('Easter egg system active. Look for hidden codes throughout the site.');
                 addFoundCode('INTRO');
               }}
-              className="group relative px-6 sm:px-8 md:px-10 py-3 sm:py-4 border border-bm-white/30 text-bm-white text-[9px] sm:text-[10px] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase hover:border-bm-accent transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2 sm:gap-3"
+              className="group relative px-6 sm:px-8 md:px-10 py-3 sm:py-4 border border-bm-white/30 text-bm-white text-[15px] sm:text-[16px] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase hover:border-bm-accent transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2 sm:gap-3"
             >
               <span className="group-hover:text-bm-accent transition-colors duration-300">Discover More</span>
               {/* Down arrow */}

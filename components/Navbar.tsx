@@ -43,7 +43,7 @@ export default function Navbar() {
             onMouseEnter={() => setShopOpen(true)}
             onMouseLeave={() => setShopOpen(false)}
           >
-            <button className="relative text-[9px] font-medium tracking-[0.2em] uppercase text-bm-gray/70 hover:text-bm-white transition-all duration-300 group py-6">
+            <button className="relative text-[15px] font-medium tracking-[0.2em] uppercase text-bm-gray/70 hover:text-bm-white transition-all duration-300 group py-6">
               <span className="relative inline-block">
                 Shop
                 {/* Subtle glow on hover */}
@@ -71,7 +71,7 @@ export default function Navbar() {
                     <a
                       key={category}
                       href={`#shop?category=${category.toLowerCase()}`}
-                      className="relative block px-6 py-3.5 text-[9px] font-medium tracking-[0.15em] uppercase text-bm-gray/80 hover:text-bm-white hover:bg-bm-accent/5 transition-all duration-200 border-b border-bm-gray/5 last:border-b-0 group/item"
+                      className="relative block px-6 py-3.5 text-[15px] font-medium tracking-[0.15em] uppercase text-bm-gray/80 hover:text-bm-white hover:bg-bm-accent/5 transition-all duration-200 border-b border-bm-gray/5 last:border-b-0 group/item"
                       style={{ animationDelay: `${index * 50}ms` }}
                     >
                       <span className="relative inline-block">
@@ -90,7 +90,7 @@ export default function Navbar() {
 
           {/* Center - Logo */}
           <div className="group relative justify-self-center cursor-pointer">
-            <span className="text-[7px] sm:text-[9px] font-black tracking-[0.15em] sm:tracking-[0.25em] uppercase text-bm-white/90 group-hover:text-bm-white transition-all duration-300 relative inline-block">
+            <span className="text-[16px] sm:text-[15px] font-black tracking-[0.15em] sm:tracking-[0.25em] uppercase text-bm-white/90 group-hover:text-bm-white transition-all duration-300 relative inline-block">
               BLACK MIRROR
               {/* Subtle glow on hover */}
               <span className="absolute inset-0 opacity-0 group-hover:opacity-60 transition-opacity duration-300 blur-[2px] text-bm-accent" aria-hidden="true">
@@ -140,7 +140,7 @@ export default function Navbar() {
 
               {/* Cart count badge */}
               {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-bm-accent text-bm-rich-black text-[7px] font-bold min-w-[14px] h-[14px] rounded-full flex items-center justify-center leading-none shadow-[0_0_8px_rgba(164,202,236,0.6)]">
+                <span className="absolute -top-1 -right-1 bg-bm-accent text-bm-rich-black text-[16px] font-bold min-w-[14px] h-[14px] rounded-full flex items-center justify-center leading-none shadow-[0_0_8px_rgba(164,202,236,0.6)]">
                   {cartCount}
                 </span>
               )}

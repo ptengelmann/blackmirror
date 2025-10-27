@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import { useStore } from '@/lib/store';
 import { PRODUCTS } from '@/lib/products';
-import { Plus } from 'lucide-react';
+import { Plus, ArrowRight } from 'lucide-react';
 
 export default function FeaturedProducts() {
+  const router = useRouter();
   const { addToCart } = useStore();
 
   const handleAddToCart = (product: any, e: React.MouseEvent) => {
@@ -29,7 +31,7 @@ export default function FeaturedProducts() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-20">
-          <span className="inline-block px-4 py-1.5 bg-white/5 border border-white/10 rounded-full font-mono text-[11px] tracking-[3px] text-gray-400 mb-5">
+          <span className="inline-block px-4 py-1.5 bg-white/5 border border-white/10 rounded-full font-mono text-[17px] tracking-[3px] text-gray-400 mb-5">
             COLLECTION_01
           </span>
           <h2 className="text-5xl md:text-7xl font-bold mb-5">
@@ -58,7 +60,7 @@ export default function FeaturedProducts() {
                 )}
 
                 {/* Episode Tag */}
-                <div className="absolute top-5 left-5 px-3 py-1.5 bg-black/90 border border-white/30 rounded-full font-mono text-[10px] tracking-[2px] text-gray-300 uppercase">
+                <div className="absolute top-5 left-5 px-3 py-1.5 bg-black/90 border border-white/30 rounded-full font-mono text-[16px] tracking-[2px] text-gray-300 uppercase">
                   {product.episode.replace('-', ' ')}
                 </div>
 
@@ -86,7 +88,7 @@ export default function FeaturedProducts() {
 
               {/* Product Info */}
               <div className="p-6">
-                <span className="font-mono text-[11px] tracking-[2px] text-gray-400 uppercase">
+                <span className="font-mono text-[17px] tracking-[2px] text-gray-400 uppercase">
                   {product.category}
                 </span>
                 <h3 className="text-xl font-semibold mt-2 mb-3">{product.title}</h3>
@@ -114,6 +116,18 @@ export default function FeaturedProducts() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Explore More Button */}
+        <div className="flex justify-center mt-16">
+          <button
+            onClick={() => router.push('/collections')}
+            className="group relative px-10 py-4 border border-bm-accent text-bm-accent text-[15px] font-bold tracking-[0.2em] uppercase hover:bg-bm-accent hover:text-bm-rich-black transition-all duration-300 flex items-center gap-3"
+          >
+            <span className="relative z-10">Explore More</span>
+            <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 scanlines pointer-events-none transition-opacity duration-300" />
+          </button>
         </div>
       </div>
     </section>

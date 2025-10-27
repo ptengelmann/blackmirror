@@ -133,7 +133,7 @@ export default function GlitchHunt() {
           <span className="font-mono text-xl sm:text-2xl font-bold text-bm-purple neon-glow">
             {foundCodes.size}/7
           </span>
-          <span className="text-[10px] sm:text-xs text-gray-400 tracking-[1.5px] sm:tracking-[2px]">GLITCHES FOUND</span>
+          <span className="text-[16px] sm:text-xs text-gray-400 tracking-[1.5px] sm:tracking-[2px]">GLITCHES FOUND</span>
         </motion.div>
       </div>
 

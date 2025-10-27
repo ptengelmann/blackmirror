@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function EpisodeCarousel() {
+  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const episodes = [
@@ -64,12 +66,12 @@ export default function EpisodeCarousel() {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-12 mb-12 sm:mb-16 md:mb-20">
         <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
           <div className="h-[1px] w-8 sm:w-12 md:w-16 bg-bm-accent" />
-          <h2 className="text-[9px] sm:text-[10px] md:text-[11px] font-black tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase text-bm-white">
+          <h2 className="text-[15px] sm:text-[16px] md:text-[17px] font-black tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase text-bm-white">
             Episode Archive
           </h2>
           <div className="h-[1px] flex-1 bg-gradient-to-r from-bm-accent/50 to-transparent" />
         </div>
-        <p className="text-bm-gray text-[7px] sm:text-[8px] md:text-[9px] tracking-[0.15em] sm:tracking-[0.2em] uppercase mt-3 sm:mt-4 ml-0 sm:ml-[60px] md:ml-[88px]">
+        <p className="text-bm-gray text-[16px] sm:text-[17px] md:text-[15px] tracking-[0.15em] sm:tracking-[0.2em] uppercase mt-3 sm:mt-4 ml-0 sm:ml-[60px] md:ml-[88px]">
           Exploring alternate realities
         </p>
       </div>
@@ -88,7 +90,10 @@ export default function EpisodeCarousel() {
                 key={episode.id}
                 className="min-w-full h-full flex items-center justify-center px-4 sm:px-8 md:px-16"
               >
-                <div className="w-full max-w-[1200px] h-[260px] sm:h-[340px] md:h-[420px] relative group cursor-pointer">
+                <div
+                  onClick={() => router.push('/collections')}
+                  className="w-full max-w-[1200px] h-[260px] sm:h-[340px] md:h-[420px] relative group cursor-pointer"
+                >
                   {/* Background - Episode imagery */}
                   {episode.image ? (
                     <img
@@ -117,7 +122,7 @@ export default function EpisodeCarousel() {
                     {/* Top - Year badge */}
                     <div className="flex justify-end">
                       <div className="px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 border border-bm-gray/30 group-hover:border-bm-accent/40 transition-colors duration-300">
-                        <span className="text-[7px] sm:text-[8px] md:text-[9px] font-medium tracking-[0.2em] sm:tracking-[0.25em] uppercase text-bm-gray/70 group-hover:text-bm-accent transition-colors duration-300">
+                        <span className="text-[16px] sm:text-[17px] md:text-[15px] font-medium tracking-[0.2em] sm:tracking-[0.25em] uppercase text-bm-gray/70 group-hover:text-bm-accent transition-colors duration-300">
                           {episode.year}
                         </span>
                       </div>
@@ -128,14 +133,14 @@ export default function EpisodeCarousel() {
                       <h3 className="text-[18px] sm:text-[24px] md:text-[28px] font-black tracking-[0.15em] sm:tracking-[0.18em] md:tracking-[0.2em] uppercase text-bm-white group-hover:text-bm-accent transition-colors duration-500">
                         {episode.title}
                       </h3>
-                      <p className="text-[9px] sm:text-[10px] md:text-[11px] font-medium tracking-[0.12em] sm:tracking-[0.15em] uppercase text-bm-gray/80 italic">
+                      <p className="text-[15px] sm:text-[16px] md:text-[17px] font-medium tracking-[0.12em] sm:tracking-[0.15em] uppercase text-bm-gray/80 italic">
                         &ldquo;{episode.tagline}&rdquo;
                       </p>
                     </div>
 
                     {/* Bottom - Episode counter */}
                     <div className="flex justify-center">
-                      <span className="text-[7px] sm:text-[8px] md:text-[9px] font-mono tracking-wider text-bm-accent/60">
+                      <span className="text-[16px] sm:text-[17px] md:text-[15px] font-mono tracking-wider text-bm-accent/60">
                         {String(episode.id).padStart(2, '0')} / {String(episodes.length).padStart(2, '0')}
                       </span>
                     </div>

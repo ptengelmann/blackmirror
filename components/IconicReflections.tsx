@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useStore } from '@/lib/store';
+import { ArrowRight } from 'lucide-react';
 
 export default function IconicReflections() {
   const router = useRouter();
@@ -71,7 +72,7 @@ export default function IconicReflections() {
 
       {/* Broken Code Background */}
       <div className="absolute inset-0 opacity-[0.08] pointer-events-none overflow-hidden">
-        <pre className="text-[6px] sm:text-[7px] md:text-[8px] font-mono text-bm-accent leading-[1.4] whitespace-pre-wrap break-all">
+        <pre className="text-[15px] sm:text-[16px] md:text-[17px] font-mono text-bm-accent leading-[1.4] whitespace-pre-wrap break-all">
 {`ERROR: REALITY.CORRUPT
 >>> import consciousness
 Traceback (most recent call last):
@@ -112,12 +113,12 @@ SYSTEM HALTED - PRESS ANY KEY
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 mb-12 sm:mb-16 md:mb-20 relative z-10">
         <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
           <div className="h-[1px] w-8 sm:w-12 md:w-16 bg-bm-accent" />
-          <h2 className="text-[9px] sm:text-[10px] md:text-[11px] font-black tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase text-bm-white">
+          <h2 className="text-[15px] sm:text-[16px] md:text-[17px] font-black tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase text-bm-white">
             Featured Products
           </h2>
           <div className="h-[1px] flex-1 bg-gradient-to-r from-bm-accent/50 to-transparent" />
         </div>
-        <p className="text-bm-gray text-[7px] sm:text-[8px] md:text-[9px] tracking-[0.15em] sm:tracking-[0.2em] uppercase mt-3 sm:mt-4 ml-0 sm:ml-[60px] md:ml-[88px]">
+        <p className="text-bm-gray text-[16px] sm:text-[17px] md:text-[15px] tracking-[0.15em] sm:tracking-[0.2em] uppercase mt-3 sm:mt-4 ml-0 sm:ml-[60px] md:ml-[88px]">
           Technology that reflects dystopia
         </p>
       </div>
@@ -172,7 +173,7 @@ SYSTEM HALTED - PRESS ANY KEY
                       </span>
                       <div className="w-3 h-3 border-2 border-bm-pink rotate-45 animate-pulse" />
                     </div>
-                    <p className="text-[7px] font-mono tracking-[0.2em] uppercase text-bm-gray/60">
+                    <p className="text-[16px] font-mono tracking-[0.2em] uppercase text-bm-gray/60">
                       Parental Controls Active
                     </p>
                   </div>
@@ -188,12 +189,12 @@ SYSTEM HALTED - PRESS ANY KEY
               <div className="absolute inset-0 p-4 sm:p-5 md:p-6 flex flex-col justify-between">
                 {/* Top - Category & Status */}
                 <div className="flex items-center justify-between">
-                  <span className={`text-[7px] font-medium tracking-[0.2em] uppercase transition-colors duration-300 ${
+                  <span className={`text-[16px] font-medium tracking-[0.2em] uppercase transition-colors duration-300 ${
                     product.isEasterEgg ? 'text-bm-pink/60' : 'text-bm-gray/60 group-hover:text-bm-accent'
                   }`}>
                     {product.category}
                   </span>
-                  <span className={`text-[6px] font-mono tracking-[0.15em] uppercase px-2 py-1 border transition-colors duration-300 ${
+                  <span className={`text-[15px] font-mono tracking-[0.15em] uppercase px-2 py-1 border transition-colors duration-300 ${
                     product.status === "BLOCKED"
                       ? 'border-bm-pink/40 text-bm-pink/80'
                       : 'border-bm-gray/20 text-bm-gray/50 group-hover:border-bm-accent/30 group-hover:text-bm-accent/70'
@@ -213,14 +214,14 @@ SYSTEM HALTED - PRESS ANY KEY
 
                 {/* Bottom - Product Info */}
                 <div className="space-y-3">
-                  <h3 className={`text-[10px] font-bold tracking-[0.15em] uppercase transition-colors duration-300 ${
+                  <h3 className={`text-[16px] font-bold tracking-[0.15em] uppercase transition-colors duration-300 ${
                     product.isEasterEgg ? 'text-bm-pink' : 'text-bm-white group-hover:text-bm-accent'
                   }`}>
                     {product.title}
                   </h3>
 
                   <div className="flex items-center justify-between">
-                    <span className={`text-[12px] font-mono font-black tracking-wider transition-colors duration-300 ${
+                    <span className={`text-[15px] font-mono font-black tracking-wider transition-colors duration-300 ${
                       product.isEasterEgg ? 'text-bm-pink/80' : 'text-bm-gray group-hover:text-bm-white'
                     }`}>
                       {product.price}
@@ -228,7 +229,7 @@ SYSTEM HALTED - PRESS ANY KEY
 
                     {!product.isEasterEgg && (
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center gap-2">
-                        <span className="text-[7px] text-bm-white/70 tracking-[0.15em] uppercase">
+                        <span className="text-[16px] text-bm-white/70 tracking-[0.15em] uppercase">
                           View
                         </span>
                         <svg
@@ -254,6 +255,18 @@ SYSTEM HALTED - PRESS ANY KEY
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Explore More Button */}
+        <div className="flex justify-center mt-12 sm:mt-16">
+          <button
+            onClick={() => router.push('/collections')}
+            className="group relative px-10 py-4 border border-bm-accent text-bm-accent text-[15px] font-bold tracking-[0.2em] uppercase hover:bg-bm-accent hover:text-bm-rich-black transition-all duration-300 flex items-center gap-3"
+          >
+            <span className="relative z-10">Explore More</span>
+            <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 scanlines pointer-events-none transition-opacity duration-300" />
+          </button>
         </div>
       </div>
     </section>

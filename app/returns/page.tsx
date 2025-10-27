@@ -18,7 +18,7 @@ export default function ReturnsPage() {
           className="group flex items-center gap-3 mb-8 sm:mb-12 text-bm-gray/60 hover:text-bm-accent transition-colors duration-300"
         >
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform duration-300" />
-          <span className="text-[9px] font-bold tracking-[0.2em] uppercase">Back</span>
+          <span className="text-[15px] font-bold tracking-[0.2em] uppercase">Back</span>
         </button>
 
         {/* Header */}
@@ -29,7 +29,7 @@ export default function ReturnsPage() {
               Delivery & Returns
             </h1>
           </div>
-          <p className="text-[10px] text-bm-gray/70 tracking-[0.15em] uppercase ml-[88px]">
+          <p className="text-[16px] text-bm-gray/70 tracking-[0.15em] uppercase ml-[88px]">
             Seamless shipping. Hassle-free returns.
           </p>
         </div>
@@ -40,8 +40,8 @@ export default function ReturnsPage() {
             <div className="absolute inset-0 scanlines opacity-5 pointer-events-none" />
             <div className="relative space-y-3">
               <Truck size={24} className="text-bm-accent" />
-              <h3 className="text-[10px] font-bold tracking-[0.2em] uppercase text-bm-white">Free Shipping</h3>
-              <p className="text-[9px] text-bm-gray/70 tracking-[0.05em]">On all orders worldwide</p>
+              <h3 className="text-[16px] font-bold tracking-[0.2em] uppercase text-bm-white">Free Shipping</h3>
+              <p className="text-[15px] text-bm-gray/70 tracking-[0.05em]">On all orders worldwide</p>
             </div>
           </div>
 
@@ -49,8 +49,8 @@ export default function ReturnsPage() {
             <div className="absolute inset-0 scanlines opacity-5 pointer-events-none" />
             <div className="relative space-y-3">
               <Clock size={24} className="text-bm-accent" />
-              <h3 className="text-[10px] font-bold tracking-[0.2em] uppercase text-bm-white">Fast Delivery</h3>
-              <p className="text-[9px] text-bm-gray/70 tracking-[0.05em]">3-7 business days</p>
+              <h3 className="text-[16px] font-bold tracking-[0.2em] uppercase text-bm-white">Fast Delivery</h3>
+              <p className="text-[15px] text-bm-gray/70 tracking-[0.05em]">3-7 business days</p>
             </div>
           </div>
 
@@ -58,8 +58,8 @@ export default function ReturnsPage() {
             <div className="absolute inset-0 scanlines opacity-5 pointer-events-none" />
             <div className="relative space-y-3">
               <RefreshCw size={24} className="text-bm-accent" />
-              <h3 className="text-[10px] font-bold tracking-[0.2em] uppercase text-bm-white">30-Day Returns</h3>
-              <p className="text-[9px] text-bm-gray/70 tracking-[0.05em]">Full refund guarantee</p>
+              <h3 className="text-[16px] font-bold tracking-[0.2em] uppercase text-bm-white">30-Day Returns</h3>
+              <p className="text-[15px] text-bm-gray/70 tracking-[0.05em]">Full refund guarantee</p>
             </div>
           </div>
 
@@ -67,8 +67,8 @@ export default function ReturnsPage() {
             <div className="absolute inset-0 scanlines opacity-5 pointer-events-none" />
             <div className="relative space-y-3">
               <Package size={24} className="text-bm-accent" />
-              <h3 className="text-[10px] font-bold tracking-[0.2em] uppercase text-bm-white">Secure Packaging</h3>
-              <p className="text-[9px] text-bm-gray/70 tracking-[0.05em]">Premium protection</p>
+              <h3 className="text-[16px] font-bold tracking-[0.2em] uppercase text-bm-white">Secure Packaging</h3>
+              <p className="text-[15px] text-bm-gray/70 tracking-[0.05em]">Premium protection</p>
             </div>
           </div>
         </div>
@@ -81,16 +81,16 @@ export default function ReturnsPage() {
               <div className="w-2 h-2 bg-bm-accent" />
               Shipping Policy
             </h2>
-            <div className="text-[11px] sm:text-[12px] text-bm-gray/80 leading-relaxed tracking-[0.02em] pl-5 space-y-4">
+            <div className="text-[17px] sm:text-[15px] text-bm-gray/80 leading-relaxed tracking-[0.02em] pl-5 space-y-4">
               <p>We offer free worldwide shipping on all orders. No minimum purchase required.</p>
 
               <div>
-                <h3 className="text-[12px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Processing Time</h3>
+                <h3 className="text-[15px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Processing Time</h3>
                 <p>Orders are processed within 1-2 business days. You will receive a confirmation email once your order ships with tracking information.</p>
               </div>
 
               <div>
-                <h3 className="text-[12px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Delivery Times</h3>
+                <h3 className="text-[15px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Delivery Times</h3>
                 <ul className="space-y-2 list-none">
                   <li className="flex items-start gap-2">
                     <div className="w-1 h-1 bg-bm-accent mt-2 flex-shrink-0" />
@@ -108,7 +108,7 @@ export default function ReturnsPage() {
               </div>
 
               <div>
-                <h3 className="text-[12px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Tracking</h3>
+                <h3 className="text-[15px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Tracking</h3>
                 <p>All orders include tracking. You&apos;ll receive updates via email as your package moves through the delivery network.</p>
               </div>
             </div>
@@ -120,11 +120,11 @@ export default function ReturnsPage() {
               <div className="w-2 h-2 bg-bm-accent" />
               Returns Policy
             </h2>
-            <div className="text-[11px] sm:text-[12px] text-bm-gray/80 leading-relaxed tracking-[0.02em] pl-5 space-y-4">
+            <div className="text-[17px] sm:text-[15px] text-bm-gray/80 leading-relaxed tracking-[0.02em] pl-5 space-y-4">
               <p>We want you to be completely satisfied with your purchase. If you&apos;re not happy, we offer a 30-day return policy.</p>
 
               <div>
-                <h3 className="text-[12px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Eligibility</h3>
+                <h3 className="text-[15px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Eligibility</h3>
                 <ul className="space-y-2 list-none">
                   <li className="flex items-start gap-2">
                     <div className="w-1 h-1 bg-bm-accent mt-2 flex-shrink-0" />
@@ -146,7 +146,7 @@ export default function ReturnsPage() {
               </div>
 
               <div>
-                <h3 className="text-[12px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">How to Return</h3>
+                <h3 className="text-[15px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">How to Return</h3>
                 <ol className="space-y-2 list-none">
                   <li className="flex items-start gap-2">
                     <span className="text-bm-accent font-mono">01.</span>
@@ -172,12 +172,12 @@ export default function ReturnsPage() {
               </div>
 
               <div>
-                <h3 className="text-[12px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Refunds</h3>
+                <h3 className="text-[15px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Refunds</h3>
                 <p>Refunds are processed within 5-7 business days of receiving your return. The refund will be issued to your original payment method. Please allow 5-10 business days for the refund to appear in your account.</p>
               </div>
 
               <div>
-                <h3 className="text-[12px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Return Shipping</h3>
+                <h3 className="text-[15px] font-bold text-bm-white mb-2 tracking-[0.1em] uppercase">Return Shipping</h3>
                 <p>Return shipping is FREE for all customers. We&apos;ll provide a prepaid return label via email.</p>
               </div>
             </div>
@@ -189,7 +189,7 @@ export default function ReturnsPage() {
               <div className="w-2 h-2 bg-bm-accent" />
               Exchanges
             </h2>
-            <div className="text-[11px] sm:text-[12px] text-bm-gray/80 leading-relaxed tracking-[0.02em] pl-5 space-y-3">
+            <div className="text-[17px] sm:text-[15px] text-bm-gray/80 leading-relaxed tracking-[0.02em] pl-5 space-y-3">
               <p>Need a different size or color? We&apos;re happy to help!</p>
               <p>Contact us at <a href="mailto:reality@blackmirror.store" className="text-bm-accent hover:underline">reality@blackmirror.store</a> to arrange an exchange. We&apos;ll send you the new item and provide a return label for the original.</p>
             </div>
@@ -201,7 +201,7 @@ export default function ReturnsPage() {
               <div className="w-2 h-2 bg-bm-accent" />
               Damaged or Defective Items
             </h2>
-            <div className="text-[11px] sm:text-[12px] text-bm-gray/80 leading-relaxed tracking-[0.02em] pl-5 space-y-3">
+            <div className="text-[17px] sm:text-[15px] text-bm-gray/80 leading-relaxed tracking-[0.02em] pl-5 space-y-3">
               <p>If you receive a damaged or defective item, please contact us immediately at <a href="mailto:reality@blackmirror.store" className="text-bm-accent hover:underline">reality@blackmirror.store</a> with photos of the damage.</p>
               <p>We&apos;ll arrange for a replacement to be sent to you at no charge, or issue a full refund if preferred.</p>
             </div>
@@ -209,10 +209,10 @@ export default function ReturnsPage() {
 
           {/* Contact */}
           <div className="mt-12 pt-8 border-t border-bm-accent/20">
-            <h2 className="text-[14px] sm:text-[16px] font-bold tracking-[0.15em] uppercase text-bm-white mb-4">
+            <h2 className="text-[17px] sm:text-[16px] font-bold tracking-[0.15em] uppercase text-bm-white mb-4">
               Questions?
             </h2>
-            <p className="text-[11px] sm:text-[12px] text-bm-gray/80 leading-relaxed tracking-[0.02em]">
+            <p className="text-[17px] sm:text-[15px] text-bm-gray/80 leading-relaxed tracking-[0.02em]">
               Have questions about shipping or returns? Contact us at{' '}
               <a href="mailto:reality@blackmirror.store" className="text-bm-accent hover:underline">
                 reality@blackmirror.store

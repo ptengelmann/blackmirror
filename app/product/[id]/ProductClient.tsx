@@ -49,6 +49,14 @@ export default function ProductClient() {
 
   const isBlocked = product.id === 'arkangel-system';
 
+  // Get related products (same category or episode, excluding current product)
+  const relatedProducts = PRODUCTS
+    .filter((p) =>
+      p.id !== product.id &&
+      (p.category === product.category || p.episode === product.episode)
+    )
+    .slice(0, 4);
+
   return (
     <div className="min-h-screen bg-bm-rich-black pt-24 pb-16">
       {/* Scanlines */}
@@ -96,15 +104,6 @@ export default function ProductClient() {
               {/* Border glow */}
               <div className="absolute inset-0 border border-bm-accent/20 group-hover:border-bm-accent/40 transition-all duration-500" />
             </div>
-
-            {/* Stock Badge */}
-            {product.stock !== undefined && product.stock > 0 && (
-              <div className="absolute top-4 right-4 px-4 py-2 bg-bm-rich-black/90 border border-bm-accent/30">
-                <span className="text-[8px] font-mono tracking-[0.15em] uppercase text-bm-accent">
-                  {product.stock} In Stock
-                </span>
-              </div>
-            )}
           </div>
 
           {/* Right - Product Details */}
@@ -253,6 +252,81 @@ export default function ProductClient() {
             )}
           </div>
         </div>
+
+        {/* You May Also Like Section */}
+        {relatedProducts.length > 0 && (
+          <div className="mt-20 sm:mt-24 md:mt-32">
+            {/* Section Header */}
+            <div className="mb-12 sm:mb-16">
+              <div className="flex items-center gap-6 mb-4">
+                <div className="h-[1px] w-16 bg-bm-accent" />
+                <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-black tracking-[0.15em] uppercase text-bm-white">
+                  You May Also Like
+                </h2>
+              </div>
+            </div>
+
+            {/* Products Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              {relatedProducts.map((relatedProduct) => (
+                <a
+                  key={relatedProduct.id}
+                  href={`/product/${relatedProduct.id}`}
+                  className="group relative bg-gradient-to-br from-bm-dark via-bm-rich-black to-bm-dark border border-bm-gray/10 hover:border-bm-accent/40 transition-all duration-500 overflow-hidden"
+                >
+                  {/* Scanline overlay */}
+                  <div className="absolute inset-0 scanlines opacity-5 pointer-events-none" />
+
+                  {/* Product Image Placeholder */}
+                  <div className="aspect-square bg-gradient-to-br from-bm-dark via-bm-rich-black to-bm-dark border-b border-bm-gray/10 flex items-center justify-center relative overflow-hidden">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 border border-bm-accent/40 group-hover:border-bm-accent group-hover:rotate-12 transition-all duration-500" />
+
+                    {/* Hover glow */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-t from-bm-accent/10 to-transparent" />
+                    </div>
+                  </div>
+
+                  {/* Product Info */}
+                  <div className="p-5 space-y-3">
+                    {/* Category */}
+                    <span className="text-[8px] font-medium tracking-[0.2em] uppercase text-bm-gray/50">
+                      {relatedProduct.category}
+                    </span>
+
+                    {/* Title */}
+                    <h3 className="text-[12px] sm:text-[13px] font-bold tracking-[0.1em] uppercase text-bm-white group-hover:text-bm-accent transition-colors duration-300 line-clamp-2">
+                      {relatedProduct.title}
+                    </h3>
+
+                    {/* Episode */}
+                    <div className="flex items-center gap-2">
+                      <div className="w-1 h-1 bg-bm-accent/60" />
+                      <span className="text-[8px] font-mono tracking-[0.15em] uppercase text-bm-accent/60">
+                        {relatedProduct.episode}
+                      </span>
+                    </div>
+
+                    {/* Price */}
+                    <div className="flex items-baseline gap-2 pt-2">
+                      <span className="text-[18px] sm:text-[20px] font-mono font-black text-bm-white">
+                        ${relatedProduct.price}
+                      </span>
+                      {relatedProduct.originalPrice && (
+                        <span className="text-[12px] font-mono line-through text-bm-gray/40">
+                          ${relatedProduct.originalPrice}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Hover border effect */}
+                  <div className="absolute inset-0 border border-transparent group-hover:border-bm-accent/20 transition-all duration-500 pointer-events-none" />
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Background grid pattern */}

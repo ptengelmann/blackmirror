@@ -44,7 +44,7 @@ export default function EpisodesSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-20">
-          <span className="inline-block px-4 py-1.5 bg-white/5 border border-white/10 rounded-full font-mono text-[11px] tracking-[3px] text-gray-400 mb-5">
+          <span className="inline-block px-4 py-1.5 bg-white/5 border border-white/10 rounded-full font-mono text-[17px] tracking-[3px] text-gray-400 mb-5">
             MEMORY_FILES
           </span>
           <h2 className="text-5xl md:text-7xl font-bold">

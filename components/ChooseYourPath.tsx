@@ -115,7 +115,7 @@ export default function ChooseYourPath() {
                 <h3 className="text-[32px] font-black tracking-[0.2em] uppercase text-bm-accent mb-4">
                   {result.type}
                 </h3>
-                <p className="text-[11px] tracking-[0.15em] text-bm-gray max-w-[600px] mx-auto leading-relaxed">
+                <p className="text-[17px] tracking-[0.15em] text-bm-gray max-w-[600px] mx-auto leading-relaxed">
                   {result.description}
                 </p>
               </div>
@@ -127,10 +127,10 @@ export default function ChooseYourPath() {
 
               {/* Recommendation */}
               <div className="text-center space-y-4">
-                <p className="text-[9px] tracking-[0.25em] uppercase text-bm-gray/60">
+                <p className="text-[15px] tracking-[0.25em] uppercase text-bm-gray/60">
                   Recommended For You
                 </p>
-                <p className="text-[14px] font-bold tracking-[0.15em] uppercase text-bm-white">
+                <p className="text-[17px] font-bold tracking-[0.15em] uppercase text-bm-white">
                   {result.recommendation}
                 </p>
               </div>
@@ -139,7 +139,7 @@ export default function ChooseYourPath() {
               <div className="flex justify-center">
                 <div className="px-8 py-4 border border-bm-accent/30 bg-bm-accent/5">
                   <div className="flex items-center gap-4">
-                    <span className="text-[8px] tracking-[0.2em] uppercase text-bm-gray/70">
+                    <span className="text-[17px] tracking-[0.2em] uppercase text-bm-gray/70">
                       Your Code:
                     </span>
                     <span className="text-[16px] font-mono font-black tracking-wider text-bm-accent">
@@ -153,13 +153,13 @@ export default function ChooseYourPath() {
               <div className="flex justify-center gap-6 pt-8">
                 <a
                   href="#shop"
-                  className="px-12 py-4 bg-bm-accent text-bm-rich-black text-[9px] font-bold tracking-[0.25em] uppercase hover:bg-bm-white transition-all duration-300"
+                  className="px-12 py-4 bg-bm-accent text-bm-rich-black text-[15px] font-bold tracking-[0.25em] uppercase hover:bg-bm-white transition-all duration-300"
                 >
                   Shop Now
                 </a>
                 <button
                   onClick={restart}
-                  className="px-12 py-4 border border-bm-white/30 text-bm-white text-[9px] font-bold tracking-[0.25em] uppercase hover:border-bm-accent hover:text-bm-accent transition-all duration-300"
+                  className="px-12 py-4 border border-bm-white/30 text-bm-white text-[15px] font-bold tracking-[0.25em] uppercase hover:border-bm-accent hover:text-bm-accent transition-all duration-300"
                 >
                   Try Again
                 </button>
@@ -192,12 +192,12 @@ export default function ChooseYourPath() {
       <div className="max-w-[1200px] mx-auto px-8 mb-16">
         <div className="flex items-center gap-6">
           <div className="h-[1px] w-16 bg-bm-accent" />
-          <h2 className="text-[11px] font-black tracking-[0.3em] uppercase text-bm-white">
+          <h2 className="text-[17px] font-black tracking-[0.3em] uppercase text-bm-white">
             Choose Your Path
           </h2>
           <div className="h-[1px] flex-1 bg-gradient-to-r from-bm-accent/50 to-transparent" />
         </div>
-        <p className="text-bm-gray text-[9px] tracking-[0.2em] uppercase mt-4 ml-[88px]">
+        <p className="text-bm-gray text-[15px] tracking-[0.2em] uppercase mt-4 ml-[88px]">
           Every choice shapes your reality
         </p>
       </div>
@@ -206,7 +206,7 @@ export default function ChooseYourPath() {
       <div className="max-w-[1000px] mx-auto px-8">
         {/* Progress */}
         <div className="flex justify-center mb-12">
-          <span className="text-[9px] font-mono tracking-wider text-bm-accent/60">
+          <span className="text-[15px] font-mono tracking-wider text-bm-accent/60">
             Question {String(currentQuestion + 1).padStart(2, '0')} / {String(questions.length).padStart(2, '0')}
           </span>
         </div>
@@ -239,7 +239,7 @@ export default function ChooseYourPath() {
 
             {/* Content */}
             <div className="relative h-full flex flex-col items-center justify-center p-8 space-y-4">
-              <span className="text-[12px] font-bold tracking-[0.2em] uppercase text-bm-white group-hover:text-bm-accent transition-colors duration-300">
+              <span className="text-[15px] font-bold tracking-[0.2em] uppercase text-bm-white group-hover:text-bm-accent transition-colors duration-300">
                 {question.choiceA.text}
               </span>
 
@@ -276,7 +276,7 @@ export default function ChooseYourPath() {
 
             {/* Content */}
             <div className="relative h-full flex flex-col items-center justify-center p-8 space-y-4">
-              <span className="text-[12px] font-bold tracking-[0.2em] uppercase text-bm-white group-hover:text-bm-accent transition-colors duration-300">
+              <span className="text-[15px] font-bold tracking-[0.2em] uppercase text-bm-white group-hover:text-bm-accent transition-colors duration-300">
                 {question.choiceB.text}
               </span>
 

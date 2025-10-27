@@ -26,13 +26,7 @@ export default function NotFound() {
           <div className="relative space-y-8 text-center">
             {/* Icon */}
             <div className="flex justify-center">
-              <div className="relative">
-                <AlertTriangle size={64} className="text-bm-pink animate-pulse" />
-                <div className="absolute inset-0 animate-pulse">
-                  <AlertTriangle size={64} className="text-bm-pink opacity-30 translate-x-[-2px]" />
-                  <AlertTriangle size={64} className="text-bm-blue opacity-30 translate-x-[2px]" />
-                </div>
-              </div>
+              <AlertTriangle size={64} className="text-bm-pink animate-pulse" />
             </div>
 
             {/* Error Code */}

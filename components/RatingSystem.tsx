@@ -102,7 +102,7 @@ export default function RatingSystem() {
       {/* Tooltip on hover */}
       <div className="absolute top-full right-0 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
         <div className="bg-bm-rich-black border border-bm-accent/20 px-3 py-1.5 whitespace-nowrap">
-          <span className="text-[7px] font-mono tracking-[0.15em] uppercase text-bm-gray/60">
+          <span className="text-[16px] font-mono tracking-[0.15em] uppercase text-bm-gray/60">
             Click to update rating
           </span>
         </div>

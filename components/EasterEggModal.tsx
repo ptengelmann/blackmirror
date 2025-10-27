@@ -1,10 +1,18 @@
 "use client";
 
+import { useMemo } from 'react';
 import { useStore } from '@/lib/store';
 import { motion, AnimatePresence } from 'framer-motion';
+import { X } from 'lucide-react';
 
 export default function EasterEggModal() {
   const { easterEggMessage, setEasterEggMessage } = useStore();
+
+  // Randomly select an icon when modal appears
+  const randomIcon = useMemo(() => {
+    const icons = ['/icon-1.png', '/icon-2.png', '/icon-3.png', '/icon-4.png'];
+    return icons[Math.floor(Math.random() * icons.length)];
+  }, [easterEggMessage]);
 
   return (
     <AnimatePresence>
@@ -37,6 +45,14 @@ export default function EasterEggModal() {
             {/* Scanlines */}
             <div className="absolute inset-0 scanlines opacity-5 pointer-events-none" />
 
+            {/* Close button */}
+            <button
+              onClick={() => setEasterEggMessage(null)}
+              className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center border border-bm-accent/30 hover:border-bm-accent hover:bg-bm-accent/10 transition-all duration-300 group"
+            >
+              <X size={16} className="text-bm-accent/60 group-hover:text-bm-accent transition-colors duration-300" />
+            </button>
+
             {/* Corner accents */}
             <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-bm-accent" />
             <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-bm-accent" />
@@ -49,7 +65,7 @@ export default function EasterEggModal() {
               <div className="text-center space-y-4">
                 <div className="flex items-center justify-center gap-4 mb-6">
                   <div className="h-[1px] w-12 bg-bm-accent" />
-                  <div className="w-2 h-2 border border-bm-accent rotate-45" />
+                  <img src={randomIcon} alt="" className="w-16 h-16 object-contain" />
                   <div className="h-[1px] w-12 bg-bm-accent" />
                 </div>
 
@@ -64,7 +80,7 @@ export default function EasterEggModal() {
 
               {/* Message */}
               <div className="text-center">
-                <p className="text-[11px] tracking-[0.1em] text-bm-white leading-relaxed max-w-[450px] mx-auto">
+                <p className="text-[17px] tracking-[0.1em] text-bm-white leading-relaxed max-w-[450px] mx-auto">
                   {easterEggMessage}
                 </p>
               </div>
@@ -75,7 +91,7 @@ export default function EasterEggModal() {
                   onClick={() => setEasterEggMessage(null)}
                   className="group relative px-12 py-4 bg-transparent border border-bm-accent/30 hover:border-bm-accent transition-all duration-300 overflow-hidden"
                 >
-                  <span className="relative z-10 text-[9px] font-bold tracking-[0.25em] uppercase text-bm-white group-hover:text-bm-rich-black transition-colors duration-300">
+                  <span className="relative z-10 text-[15px] font-bold tracking-[0.25em] uppercase text-bm-white group-hover:text-bm-rich-black transition-colors duration-300">
                     Acknowledge
                   </span>
 
@@ -90,7 +106,7 @@ export default function EasterEggModal() {
               {/* Status bar */}
               <div className="flex items-center justify-center gap-3 pt-4">
                 <div className="w-1.5 h-1.5 bg-bm-accent animate-pulse" />
-                <span className="text-[7px] font-mono tracking-[0.2em] uppercase text-bm-accent/60">
+                <span className="text-[16px] font-mono tracking-[0.2em] uppercase text-bm-accent/60">
                   Easter Egg Detected
                 </span>
                 <div className="w-1.5 h-1.5 bg-bm-accent animate-pulse" />
