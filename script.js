@@ -43,6 +43,7 @@ let userRating = 4.2;
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
+    initNavbarScroll();
     initGlitchEffects();
     initSecretCodeSystem();
     initRatingSystem();
@@ -52,6 +53,22 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollEffects();
     updateCodesCounter();
 });
+
+// ============================================
+// NAVBAR SCROLL EFFECT
+// ============================================
+
+function initNavbarScroll() {
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+}
 
 // ============================================
 // GLITCH EFFECTS
@@ -417,17 +434,8 @@ function initInteractiveElements() {
 // ============================================
 
 function initScrollEffects() {
-    // Parallax on hero
+    // Fade in elements on scroll
     window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        const hero = document.querySelector('.hero-content');
-
-        if (hero) {
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            hero.style.opacity = 1 - scrolled / 800;
-        }
-
-        // Fade in elements
         const elements = document.querySelectorAll('.product-card, .episode-card');
         elements.forEach(el => {
             const rect = el.getBoundingClientRect();

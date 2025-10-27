@@ -81,7 +81,7 @@ export default function GlitchHunt() {
         >
           Hidden across the site are <span className="text-bm-cyan neon-glow">special codes</span>.
           <br />
-          Some you'll see. Some you'll feel. Unlock them for exclusive rewards.
+          Some you&apos;ll see. Some you&apos;ll feel. Unlock them for exclusive rewards.
         </motion.p>
 
         {/* Code Input */}

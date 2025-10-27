@@ -129,7 +129,7 @@ export default function EpisodeCarousel() {
                         {episode.title}
                       </h3>
                       <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-bm-gray/80 italic">
-                        "{episode.tagline}"
+                        &ldquo;{episode.tagline}&rdquo;
                       </p>
                     </div>
 

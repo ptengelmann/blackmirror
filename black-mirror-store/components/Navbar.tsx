@@ -89,7 +89,7 @@ export default function Navbar() {
           </div>
 
           {/* Center - Logo */}
-          <a href="/" className="group relative justify-self-center">
+          <div className="group relative justify-self-center cursor-pointer">
             <span className="text-[9px] font-black tracking-[0.25em] uppercase text-bm-white/90 group-hover:text-bm-white transition-all duration-300 relative inline-block">
               BLACK MIRROR
               {/* Subtle glow on hover */}
@@ -104,7 +104,7 @@ export default function Navbar() {
                 BLACK MIRROR
               </span>
             </span>
-          </a>
+          </div>
 
           {/* Right - Custom Black Mirror Icons */}
           <div className="flex items-center gap-8 justify-self-end">

@@ -115,7 +115,7 @@ export default function Newsletter() {
                 <path d="M7 11V7C7 4.79086 8.79086 3 11 3H13C15.2091 3 17 4.79086 17 7V11" stroke="currentColor" strokeWidth="2"/>
               </svg>
               <p className="text-[8px] tracking-[0.15em] uppercase text-bm-gray/60">
-                Your data remains yours. We don't stream your reality.
+                Your data remains yours. We don&apos;t stream your reality.
               </p>
             </div>
           </div>
