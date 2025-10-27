@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import GlitchOverlay from "@/components/GlitchOverlay";
 import EasterEggModal from "@/components/EasterEggModal";
 import RatingSystem from "@/components/RatingSystem";
+import Chatbox from "@/components/Chatbox";
 
 export const metadata: Metadata = {
   title: "BLACK MIRROR - Official Merch Store",
@@ -27,6 +28,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <EasterEggModal />
+        <Chatbox />
 
         {/* Background grain effect */}
         <div className="fixed inset-0 grain pointer-events-none z-0" />

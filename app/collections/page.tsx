@@ -7,13 +7,25 @@ import { Filter } from 'lucide-react';
 
 export default function CollectionsPage() {
   const router = useRouter();
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
   const categories = Array.from(new Set(PRODUCTS.map((p) => p.category)));
 
-  const filteredProducts = selectedCategory
-    ? PRODUCTS.filter((p) => p.category === selectedCategory)
+  const filteredProducts = selectedCategories.length > 0
+    ? PRODUCTS.filter((p) => selectedCategories.includes(p.category))
     : PRODUCTS;
+
+  const toggleCategory = (category: string) => {
+    setSelectedCategories(prev =>
+      prev.includes(category)
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
+  };
+
+  const clearFilters = () => {
+    setSelectedCategories([]);
+  };
 
   return (
     <div className="min-h-screen bg-bm-rich-black pt-24 pb-16">
@@ -45,9 +57,9 @@ export default function CollectionsPage() {
 
           <div className="flex flex-wrap gap-3">
             <button
-              onClick={() => setSelectedCategory(null)}
+              onClick={clearFilters}
               className={`px-5 py-2.5 border text-[15px] font-bold tracking-[0.2em] uppercase transition-all duration-300 ${
-                selectedCategory === null
+                selectedCategories.length === 0
                   ? 'border-bm-accent bg-bm-accent/10 text-bm-accent'
                   : 'border-bm-gray/20 text-bm-gray/60 hover:border-bm-accent/50 hover:text-bm-white'
               }`}
@@ -57,9 +69,9 @@ export default function CollectionsPage() {
             {categories.map((category) => (
               <button
                 key={category}
-                onClick={() => setSelectedCategory(category)}
+                onClick={() => toggleCategory(category)}
                 className={`px-5 py-2.5 border text-[15px] font-bold tracking-[0.2em] uppercase transition-all duration-300 ${
-                  selectedCategory === category
+                  selectedCategories.includes(category)
                     ? 'border-bm-accent bg-bm-accent/10 text-bm-accent'
                     : 'border-bm-gray/20 text-bm-gray/60 hover:border-bm-accent/50 hover:text-bm-white'
                 }`}

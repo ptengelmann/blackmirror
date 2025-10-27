@@ -138,7 +138,7 @@ export default function Footer() {
                 <motion.img
                   src={isDead ? '/thronglet-dead.png' : '/thronglet-live.png'}
                   alt="Thrognlet"
-                  className="w-40 h-40 object-contain"
+                  className="w-48 h-48 object-contain"
                   animate={
                     isDead
                       ? {
@@ -168,7 +168,7 @@ export default function Footer() {
                     <img
                       src="/thronglet-dead.png"
                       alt=""
-                      className="w-40 h-40 object-contain opacity-50"
+                      className="w-48 h-48 object-contain opacity-50"
                       style={{
                         transform: 'translate(-2px, 1px)',
                         filter: 'hue-rotate(180deg)',
