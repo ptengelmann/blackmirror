@@ -6,6 +6,7 @@ import GlitchOverlay from "@/components/GlitchOverlay";
 import EasterEggModal from "@/components/EasterEggModal";
 import RatingSystem from "@/components/RatingSystem";
 import Chatbox from "@/components/Chatbox";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export const metadata: Metadata = {
   title: "BLACK MIRROR - Official Merch Store",
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <LoadingScreen />
         <GlitchOverlay />
         <RatingSystem />
         <Navbar />

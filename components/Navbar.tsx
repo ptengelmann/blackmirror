@@ -109,7 +109,7 @@ export default function Navbar() {
           {/* Right - Custom Black Mirror Icons */}
           <div className="flex items-center gap-4 sm:gap-6 md:gap-8 justify-self-end">
             {/* User Icon - Custom Black Mirror style */}
-            <button className="relative group w-5 h-5">
+            <button onClick={() => (window.location.href = '/login')} className="relative group w-5 h-5">
               <div className="relative">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-bm-white/50 group-hover:text-bm-accent transition-all duration-300">
                   <circle cx="12" cy="8" r="3.5" stroke="currentColor" strokeWidth="1.2"/>
