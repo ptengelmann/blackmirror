@@ -4,12 +4,20 @@ import { useEffect, useState } from 'react';
 import { useStore } from '@/lib/store';
 
 export default function LoadingScreen() {
+  // Check if already shown - do this check immediately
+  const [shouldShow, setShouldShow] = useState<boolean | null>(null);
   const [progress, setProgress] = useState(0);
   const [stage, setStage] = useState(0);
   const [glitch, setGlitch] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
   const [currentTime, setCurrentTime] = useState('00:00:00');
   const { addFoundCode, setEasterEggMessage } = useStore();
+
+  // Check sessionStorage on mount
+  useEffect(() => {
+    const hasSeenBefore = sessionStorage.getItem('hasSeenLoadingScreen') === 'true';
+    setShouldShow(!hasSeenBefore);
+  }, []);
 
   const stages = [
     { text: "INITIALIZING BLACK MIRROR PROTOCOL", delay: 300 },
@@ -24,6 +32,11 @@ export default function LoadingScreen() {
   ];
 
   useEffect(() => {
+    // Don't run animations if we shouldn't show or if already complete
+    if (shouldShow !== true) {
+      return;
+    }
+
     // Set initial time
     setCurrentTime(new Date().toLocaleTimeString('en-US', { hour12: false }));
 
@@ -71,6 +84,8 @@ export default function LoadingScreen() {
     // Complete after 5 seconds
     const completeTimer = setTimeout(() => {
       setIsComplete(true);
+      // Mark as shown in sessionStorage
+      sessionStorage.setItem('hasSeenLoadingScreen', 'true');
     }, 5000);
 
     return () => {
@@ -80,9 +95,10 @@ export default function LoadingScreen() {
       clearInterval(glitchInterval);
       clearTimeout(completeTimer);
     };
-  }, [addFoundCode, setEasterEggMessage]);
+  }, [shouldShow, addFoundCode, setEasterEggMessage, stages.length]);
 
-  if (isComplete) {
+  // Don't render anything if we're checking or shouldn't show
+  if (shouldShow === null || shouldShow === false || isComplete) {
     return null;
   }
 
